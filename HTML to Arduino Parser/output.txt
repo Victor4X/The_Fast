@@ -1,0 +1,14 @@
+client.println("var request = new XMLHttpRequest();");
+client.println("request.open('GET', '/my/url', true);");
+client.println("request.onload = function() {");
+client.println("  if (request.status >= 200 && request.status < 400) {");
+client.println("    // Success!");
+client.println("    var resp = request.responseText;");
+client.println("  } else {");
+client.println("    // We reached our target server, but it returned an error");
+client.println("  }");
+client.println("};");
+client.println("request.onerror = function() {");
+client.println("  // There was a connection error of some sort");
+client.println("};");
+client.println("request.send();");
