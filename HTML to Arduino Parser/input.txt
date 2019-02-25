@@ -1,7 +1,16 @@
-function AjaxGET(target){
-var opts = {
-  method: 'GET',      
-  headers: {}
-};
-fetch('/get-data', opts)
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.key == "w") {
+	moveForward()
+    }
+    if (evt.key == "a") {
+	moveLeft()
+    }
+    if (evt.key == "s") {
+	moveBackward()
+    }
+    if (evt.key == "d") {
+	moveRight()
+    }
+    
 };
