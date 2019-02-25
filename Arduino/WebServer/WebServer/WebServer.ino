@@ -72,27 +72,32 @@ void loop(){
             client.println(".button { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: #4CAF50;");
             client.println("border: none; color: white; padding: 12px 28px; text-decoration: none; font-size: 26px; margin: 1px; cursor: pointer;}");
             client.println(".button2 {background-color: #555555;}</style>");
-            client.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script></head>");
             
             // Web Page        
             client.println("<p><button class=\"button\" onclick=\"moveForward()\">FORWARD</button></p>");
             client.println("<div style=\"clear: both;\"><p><button class=\"button\" onclick=\"moveLeft()\">LEFT </button>");
-            client.println("<button class=\"button button2\" onclick=\"stopRobot()\">STOP</button>");
             client.println("<button class=\"button\" onclick=\"moveRight()\">RIGHT</button></p></div>");
-            client.println("<p><button class=\"button\" onclick=\"moveReverse()\">REVERSE</button></p>");
-            client.println("<p>Motor Speed: <span id=\"motorSpeed\"></span></p>");          
-            client.println("<input type=\"range\" min=\"0\" max=\"100\" step=\"25\" id=\"motorSlider\" onchange=\"motorSpeed(this.value)\" value=\"" + valueString + "\"/>");
+            client.println("<p><button class=\"button\" onclick=\"moveBackward()\">BACKWARD</button></p>");
+
+            //Scripts
+            client.println("<script>");
             
-            client.println("<script>$.ajaxSetup({timeout:1000});");
-            client.println("function moveForward() { $.get(\"/forward\"); {Connection: close};}");
-            client.println("function moveLeft() { $.get(\"/left\"); {Connection: close};}");
-            client.println("function stopRobot() {$.get(\"/stop\"); {Connection: close};}");
-            client.println("function moveRight() { $.get(\"/right\"); {Connection: close};}");
-            client.println("function moveReverse() { $.get(\"/reverse\"); {Connection: close};}");
-            client.println("var slider = document.getElementById(\"motorSlider\");");
-            client.println("var motorP = document.getElementById(\"motorSpeed\"); motorP.innerHTML = slider.value;");
-            client.println("slider.oninput = function() { slider.value = this.value; motorP.innerHTML = this.value; }");
-            client.println("function motorSpeed(pos) { $.get(\"/?value=\" + pos + \"&\"); {Connection: close};}</script>");
+            client.println("function moveForward() { AjaxGET(\"/forward\") };");
+            client.println("function moveLeft() { AjaxGET(\"/left\") };");
+            client.println("function moveRight() { AjaxGET(\"/right\") };");
+            client.println("function moveBackward() { AjaxGET(\"/backward\") };");
+
+            //Ajax call (GET)
+            client.println("function AjaxGET(target){");
+            client.println("var opts = {");
+            client.println("  method: 'GET',");
+            client.println("  headers: {}");
+            client.println("};");
+            client.println("fetch(target, opts)");
+            client.println("};");
+
+            client.println("</script>");
+
            
             client.println("</html>");
             
