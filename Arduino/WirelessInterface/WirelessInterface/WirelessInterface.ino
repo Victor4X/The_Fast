@@ -1,7 +1,22 @@
 /*********
-  Rui Santos
-  Complete project details at http://randomnerdtutorials.com  
+
+Inspiration from:
+  Rui Santos - https://github.com/RuiSantosdotme/ESP32-Course/blob/master/code/Project_Robot/Project_Robot.ino
+  
 *********/
+// Set pin numbers
+
+  // Movement
+bool movementChange = false;
+
+const int forwardPin = 19;
+const int backwardPin = 18;
+
+// Movement variables
+bool bForward = false;
+bool bBackward = false;
+bool bLeft = false;
+bool bRight = false;
 
 // Load Wi-Fi library
 #include <WiFi.h>
@@ -9,6 +24,9 @@
 // Replace with your network credentials
 const char* ssid     = "OnePlus2";
 const char* password = "24681357";
+
+//const char* ssid     = "Sde-Guest";
+//const char* password = "";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -24,12 +42,20 @@ int pos2 = 0;
 void setup() {
   Serial.begin(115200);
 
+  // Pin stuffs
+  pinMode(forwardPin, OUTPUT);
+  pinMode(backwardPin, OUTPUT);
+
   // Connect to Wi-Fi network with SSID and password
   Serial.print("Connecting to ");
   Serial.println(ssid);
   WiFi.begin(ssid, password);
+  delay(1000);
+  WiFi.disconnect();  // what the fuck
+  delay(1000);
+  WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
+    delay(1000);
     Serial.print(".");
   }
   // Print local IP address and start web server
@@ -63,29 +89,50 @@ void loop(){
             client.println();
 
             // Controls the motor pins according to the button pressed
+            movementChange = true;
+            
             if (header.indexOf("GET /forward") >= 0) {
               Serial.println("Forward");
+              bForward = true;
+              bBackward = false;
 
             }  else if (header.indexOf("GET /left") >= 0) {
               Serial.println("Left");
+              bLeft = true;
+              bRight = false;
                   
             } else if (header.indexOf("GET /right") >= 0) {
               Serial.println("Right");
+              bRight = true;
+              bLeft = false;
                  
             } else if (header.indexOf("GET /backward") >= 0) {
               Serial.println("Backward");
+              bBackward = true;
+              bForward = false;
                        
             }else if (header.indexOf("GET /stopforward") >= 0) {
               Serial.println("stopForward");
+              bForward = false;
                        
             }else if (header.indexOf("GET /stopleft") >= 0) {
               Serial.println("stopLeft");
+              bLeft = false;
                        
             }else if (header.indexOf("GET /stopright") >= 0) {
               Serial.println("stopRight");
+              bRight = false;
                        
             }else if (header.indexOf("GET /stopbackward") >= 0) {
               Serial.println("stopBackward");
+              bBackward = false;
+                       
+            }else if (header.indexOf("GET /stopall") >= 0) {
+              Serial.println("stopAll");
+              bBackward = false;
+              bForward = false;
+              bLeft = false;
+              bRight = false;
                        
             }
 
@@ -101,10 +148,14 @@ void loop(){
             client.println(".button2 {background-color: #555555;}</style>");
             
             // Web Page        
+
+              // Buttons
             client.println("<p><button class=\"button\" onclick=\"moveForward()\">FORWARD</button></p>");
             client.println("<div style=\"clear: both;\"><p><button class=\"button\" onclick=\"moveLeft()\">LEFT </button>");
             client.println("<button class=\"button\" onclick=\"moveRight()\">RIGHT</button></p></div>");
             client.println("<p><button class=\"button\" onclick=\"moveBackward()\">BACKWARD</button></p>");
+            
+            client.println("<p><button class=\"button button2\" onclick=\"stopAll()\">STOP</button></p>");
             
 
             //Scripts
@@ -154,6 +205,8 @@ void loop(){
             client.println("function stopRight() { AjaxGET(\"/stopright\") };");
             client.println("function stopBackward() { AjaxGET(\"/stopbackward\") };");
 
+            client.println("function stopAll() { AjaxGET(\"/stopall\") };");
+
             //Ajax call (GET)
             client.println("function AjaxGET(target){");
             client.println("var opts = {");
@@ -187,4 +240,33 @@ void loop(){
     Serial.println("Client disconnected.");
     Serial.println("");
   }
+
+  // Movement stuffs
+
+  if (movementChange == true){
+    movementChange = false;
+
+    // Turn off pins
+    if (bForward == false){
+      Serial.println("Pin 19 LOW");
+      digitalWrite(forwardPin, LOW);
+    }
+    if (bBackward == false){
+      Serial.println("Pin 18 LOW");
+      digitalWrite(backwardPin, LOW);
+    }
+
+    delay(400);
+  
+    // Turn on pins
+    if (bForward == true){
+      Serial.println("Pin 19 HIGH");
+      digitalWrite(forwardPin, HIGH);
+    }
+    if (bBackward == true){
+      Serial.println("Pin 18 HIGH");
+      digitalWrite(backwardPin, HIGH);
+    }
+  }
+  
 }
