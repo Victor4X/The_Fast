@@ -1,0 +1,64 @@
+
+<!DOCTYPE HTML><html>
+    <head><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
+    .button { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: #4CAF50;
+    border: none; color: white; padding: 12px 28px; text-decoration: none; font-size: 26px; margin: 1px; cursor: pointer;}
+    .button2 {background-color: #555555;}</style>
+    <p><button class="button" onclick="moveForward()">FORWARD</button></p>
+    <div style="clear: both;"><p><button class="button" onclick="moveLeft()">LEFT </button>
+    <button class="button" onclick="moveRight()">RIGHT</button></p></div>
+    <p><button class="button" onclick="moveBackward()">BACKWARD</button></p>
+    <p><button class="button button2" onclick="stopAll()">STOP</button></p>
+    <script>
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.key == "w" && evt.repeat == false) {
+      moveForward()
+        };
+        if (evt.key == "a" && evt.repeat == false) {
+      moveLeft()
+        };
+        if (evt.key == "s" && evt.repeat == false) {
+      moveBackward()
+        };
+        if (evt.key == "d" && evt.repeat == false) {
+      moveRight()
+        };
+    };
+    document.onkeyup = function(evt) {
+        evt = evt || window.event;
+        if (evt.key == "w") {
+      stopForward()
+        };
+        if (evt.key == "a") {
+      stopLeft()
+        };
+        if (evt.key == "s") {
+      stopBackward()
+        };
+        if (evt.key == "d") {
+      stopRight()
+        };
+    };
+    function moveForward() { AjaxGET("/forward") };
+    function moveLeft() { AjaxGET("/left") };
+    function moveRight() { AjaxGET("/right") };
+    function moveBackward() { AjaxGET("/backward") };
+    function stopForward() { AjaxGET("/stopforward") };
+    function stopLeft() { AjaxGET("/stopleft") };
+    function stopRight() { AjaxGET("/stopright") };
+    function stopBackward() { AjaxGET("/stopbackward") };
+    function stopAll() { AjaxGET("/stopall") };
+    function AjaxGET(target){
+    var opts = {
+      method: 'GET',
+      headers: {}
+    };
+    fetch(target, opts)
+    };
+    </script>
+    </html>
+    
+    
