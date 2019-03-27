@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name 00-OTG-Connectorer)(type Legacy)(uri "C:/Users/jonas/Desktop/Teknik/Eksamens projekt/The_Fast/Kredsløb print/Libraries/00-OTG-Connectorer.lib")(options "")(descr ""))
+  (lib (name 00-OTG-mekaniske)(type Legacy)(uri "C:/Users/jonas/Desktop/Teknik/Eksamens projekt/The_Fast/Kredsløb print/Libraries/00-OTG-mekaniske.lib")(options "")(descr ""))
+  (lib (name 00-OTG-Microcontroler)(type Legacy)(uri "C:/Users/jonas/Desktop/Teknik/Eksamens projekt/The_Fast/Kredsløb print/Libraries/00-OTG-Microcontroler.lib")(options "")(descr ""))
+  (lib (name 00-OTG-Sensor)(type Legacy)(uri "C:/Users/jonas/Desktop/Teknik/Eksamens projekt/The_Fast/Kredsløb print/Libraries/00-OTG-Sensor.lib")(options "")(descr ""))
+  (lib (name 00-OTG-Transistor)(type Legacy)(uri "C:/Users/jonas/Desktop/Teknik/Eksamens projekt/The_Fast/Kredsløb print/Libraries/00-OTG-Transistor.lib")(options "")(descr ""))
+)

@@ -1,0 +1,63 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BC547
+D 0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92
+K NPN Transistor
+F http://www.fairchildsemi.com/ds/BC/BC547.pdf
+$ENDCMP
+#
+$CMP BC550
+D 0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92
+K NPN Transistor
+F http://www.fairchildsemi.com/ds/BC/BC547.pdf
+$ENDCMP
+#
+$CMP BC556
+D 0.1A Ic, 65V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$ENDCMP
+#
+$CMP BC557
+D 0.1A Ic, 45V Vce, PNP Small Signal Transistor, TO-92
+K PNP Transistor
+F http://www.fairchildsemi.com/ds/BC/BC557.pdf
+$ENDCMP
+#
+$CMP BUZ11
+D 30A Id, 50V Vds, N-Channel Power MOSFET, TO-220
+K N-Channel Power MOSFET
+F http://www.fairchildsemi.com/ds/BU/BUZ11.pdf
+$ENDCMP
+#
+$CMP IRF540N
+D 33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220
+K HEXFET N-Channel MOSFET
+F http://www.irf.com/product-info/datasheets/data/irf540n.pdf
+$ENDCMP
+#
+$CMP IRF9530
+D -23A Id, -100V Vds, HEXFET P-Channel MOSFET, TO-220
+K HEXFET P-Channel MOSFET
+F http://www.irf.com/product-info/datasheets/data/irf9540n.pdf
+$ENDCMP
+#
+$CMP TIP120
+D 5A Ic, 60V Vce, Silicon Darlington Power Transistor NPN, TO-220
+K Darlington Power Transistor NPN
+F http://www.fairchildsemi.com/ds/TI/TIP120.pdf
+$ENDCMP
+#
+$CMP TIP122
+D 5A Ic, 100V Vce, Silicon Darlington Power Transistor NPN, TO-220
+K Darlington Power Transistor NPN
+F http://www.fairchildsemi.com/ds/TI/TIP120.pdf
+$ENDCMP
+#
+$CMP TIP127
+D 5A Ic, 60V Vce, Silicon Darlington Power PNP Transistor, TO-220
+K Darlington Power PNP Transistor
+F http://www.fairchildsemi.com/ds/TI/TIP125.pdf
+$ENDCMP
+#
+#End Doc Library

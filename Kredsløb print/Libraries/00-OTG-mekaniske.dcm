@@ -1,0 +1,14 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Rele-stort
+D Relay Miniature Omron DPDT
+K Miniature Relay Dual Pole DPDT Omron
+F http://omronfs.omron.com/en_US/ecb/products/pdf/en-g5v_2.pdf
+$ENDCMP
+#
+$CMP Tact-switch
+D Push button switch, generic, two pins
+K switch normally-open pushbutton push-button
+$ENDCMP
+#
+#End Doc Library
