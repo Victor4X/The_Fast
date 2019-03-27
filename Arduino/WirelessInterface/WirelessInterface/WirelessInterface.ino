@@ -18,15 +18,20 @@ bool bBackward = false;
 bool bLeft = false;
 bool bRight = false;
 
+bool bRotateCW = false;
+bool bRotateCCW = false;
+
+
 // Load Wi-Fi library
 #include <WiFi.h>
 
 // Replace with your network credentials
-const char* ssid     = "OnePlus2";
-const char* password = "24681357";
 
-//const char* ssid     = "Sde-Guest";
-//const char* password = "";
+//const char* ssid     = "OnePlus2";
+//const char* password = "24681357";
+
+const char* ssid     = "Sde-Guest";
+const char* password = "";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -142,20 +147,32 @@ void loop(){
             client.println("<link rel=\"icon\" href=\"data:,\">");
             // CSS to style the buttons 
             // Feel free to change the background-color and font-size attributes to fit your preferences
-            client.println("<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}");
+            client.println("<style>");
+            client.println("html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}");
             client.println(".button { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: #4CAF50;");
             client.println("border: none; color: white; padding: 12px 28px; text-decoration: none; font-size: 26px; margin: 1px; cursor: pointer;}");
-            client.println(".button2 {background-color: #555555;}</style>");
+            client.println(".button2 {background-color: #555555;}");
+            client.println(".button3 {background-color: #4162f4;}</style>");
+            client.println("</style>");
+            client.println("</head>");
             
             // Web Page        
-
+            client.println("<body bgcolor=\"#17181c\">");
               // Buttons
-            client.println("<p><button class=\"button\" onclick=\"moveForward()\">FORWARD</button></p>");
-            client.println("<div style=\"clear: both;\"><p><button class=\"button\" onclick=\"moveLeft()\">LEFT </button>");
-            client.println("<button class=\"button\" onclick=\"moveRight()\">RIGHT</button></p></div>");
+            client.println("<div style=\"clear: both;\"> <p>");
+            client.println("<button class=\"button button3\" onclick=\"rotateCCW()\">TURN &#10226;</button>");
+            client.println("<button class=\"button\" onclick=\"moveForward()\">FORWARD</button>");
+            client.println("<button class=\"button button3\" onclick=\"rotateCW()\">TURN &#10227;</button>");
+            client.println("</p> </div>");
+            client.println("<div style=\"clear: both;\"> <p>");
+            client.println("<button class=\"button\" onclick=\"moveLeft()\">LEFT </button>");
+            client.println("<button class=\"button\" onclick=\"moveRight()\">RIGHT</button>");
+            client.println("</p> </div>");
             client.println("<p><button class=\"button\" onclick=\"moveBackward()\">BACKWARD</button></p>");
             
             client.println("<p><button class=\"button button2\" onclick=\"stopAll()\">STOP</button></p>");
+
+            client.println("</body>");
             
 
             //Scripts
