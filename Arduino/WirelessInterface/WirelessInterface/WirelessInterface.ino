@@ -18,8 +18,9 @@ bool bBackward = false;
 bool bLeft = false;
 bool bRight = false;
 
-bool bRotateCW = false;
 bool bRotateCCW = false;
+bool bRotateCW = false;
+
 
 
 // Load Wi-Fi library
@@ -101,20 +102,29 @@ void loop(){
               bForward = true;
               bBackward = false;
 
-            }  else if (header.indexOf("GET /left") >= 0) {
+            }else if (header.indexOf("GET /left") >= 0) {
               Serial.println("Left");
               bLeft = true;
               bRight = false;
                   
-            } else if (header.indexOf("GET /right") >= 0) {
+            }else if (header.indexOf("GET /right") >= 0) {
               Serial.println("Right");
               bRight = true;
               bLeft = false;
                  
-            } else if (header.indexOf("GET /backward") >= 0) {
+            }else if (header.indexOf("GET /backward") >= 0) {
               Serial.println("Backward");
               bBackward = true;
               bForward = false;
+
+            }else if (header.indexOf("GET /rotateccw") >= 0) {
+              Serial.println("Rotate CCW");
+              bRotateCCW = true;
+              
+
+            }else if (header.indexOf("GET /rotatecw") >= 0) {
+              Serial.println("Rotate CW");
+              bRotateCW = true;
                        
             }else if (header.indexOf("GET /stopforward") >= 0) {
               Serial.println("stopForward");
@@ -131,6 +141,14 @@ void loop(){
             }else if (header.indexOf("GET /stopbackward") >= 0) {
               Serial.println("stopBackward");
               bBackward = false;
+
+            }else if (header.indexOf("GET /stopccw") >= 0) {
+              Serial.println("Stop CCW");
+              bRotateCCW = false;
+
+            }else if (header.indexOf("GET /stopcw") >= 0) {
+              Serial.println("Stop CW");
+              bRotateCW = false;
                        
             }else if (header.indexOf("GET /stopall") >= 0) {
               Serial.println("stopAll");
@@ -138,6 +156,8 @@ void loop(){
               bForward = false;
               bLeft = false;
               bRight = false;
+              bRotateCCW = false;
+              bRotateCW = false;
                        
             }
 
@@ -159,11 +179,18 @@ void loop(){
             // Web Page        
             client.println("<body bgcolor=\"#17181c\">");
               // Buttons
+
+            // Top row
             client.println("<div style=\"clear: both;\"> <p>");
+            // Turn left CCW
             client.println("<button class=\"button button3\" onclick=\"rotateCCW()\">TURN &#10226;</button>");
+            // Move forwards
             client.println("<button class=\"button\" onclick=\"moveForward()\">FORWARD</button>");
+            // Turn right CW
             client.println("<button class=\"button button3\" onclick=\"rotateCW()\">TURN &#10227;</button>");
             client.println("</p> </div>");
+
+            // Middle row
             client.println("<div style=\"clear: both;\"> <p>");
             client.println("<button class=\"button\" onclick=\"moveLeft()\">LEFT </button>");
             client.println("<button class=\"button\" onclick=\"moveRight()\">RIGHT</button>");
@@ -193,6 +220,12 @@ void loop(){
             client.println("    if (evt.key == \"d\" && evt.repeat == false) {");
             client.println("  moveRight()");
             client.println("    };");
+            client.println("    if (evt.key == \"q\" && evt.repeat == false) {");
+            client.println("  rotateCCW()");
+            client.println("    };");
+            client.println("    if (evt.key == \"e\" && evt.repeat == false) {");
+            client.println("  rotateCW()");
+            client.println("    };");
             client.println("};");
 
             client.println("document.onkeyup = function(evt) {");
@@ -209,6 +242,12 @@ void loop(){
             client.println("    if (evt.key == \"d\") {");
             client.println("  stopRight()");
             client.println("    };");
+            client.println("    if (evt.key == \"q\") {");
+            client.println("  stopCCW()");
+            client.println("    };");
+            client.println("    if (evt.key == \"e\") {");
+            client.println("  stopCW()");
+            client.println("    };");
             client.println("};");
 
             //Movement
@@ -217,10 +256,16 @@ void loop(){
             client.println("function moveRight() { AjaxGET(\"/right\") };");
             client.println("function moveBackward() { AjaxGET(\"/backward\") };");
 
+            client.println("function rotateCCW() { AjaxGET(\"/rotateccw\") };");
+            client.println("function rotateCW() { AjaxGET(\"/rotatecw\") };");
+
             client.println("function stopForward() { AjaxGET(\"/stopforward\") };");
             client.println("function stopLeft() { AjaxGET(\"/stopleft\") };");
             client.println("function stopRight() { AjaxGET(\"/stopright\") };");
             client.println("function stopBackward() { AjaxGET(\"/stopbackward\") };");
+
+            client.println("function stopCCW() { AjaxGET(\"/stopccw\") };");
+            client.println("function stopCW() { AjaxGET(\"/stopcw\") };");
 
             client.println("function stopAll() { AjaxGET(\"/stopall\") };");
 
