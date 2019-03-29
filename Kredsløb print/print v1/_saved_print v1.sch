@@ -1,0 +1,130 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 00-OTG-Microcontroler:esp32 U?
+U 1 1 5C9DC679
+P 5350 3850
+F 0 "U?" H 5350 5597 60  0000 C CNN
+F 1 "esp32" H 5350 5491 60  0000 C CNN
+F 2 "" H 5350 3850 60  0001 C CNN
+F 3 "" H 5350 3850 60  0001 C CNN
+	1    5350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP120 Q?
+U 1 1 5C9DDA95
+P 7600 2050
+F 0 "Q?" H 7841 2096 50  0000 L CNN
+F 1 "TIP120" H 7841 2005 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 7850 1975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 7600 2050 50  0001 L CNN
+	1    7600 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP120 Q?
+U 1 1 5C9DFC6A
+P 8600 2050
+F 0 "Q?" H 8841 2096 50  0000 L CNN
+F 1 "TIP120" H 8841 2005 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 8850 1975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8600 2050 50  0001 L CNN
+	1    8600 2050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP127 Q?
+U 1 1 5C9E1CCC
+P 7600 1300
+F 0 "Q?" H 7807 1346 50  0000 L CNN
+F 1 "TIP127" H 7807 1255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7800 1225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 7600 1300 50  0001 L CNN
+	1    7600 1300
+	1    0    0    1   
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP127 Q?
+U 1 1 5C9E3069
+P 8600 1300
+F 0 "Q?" H 8807 1346 50  0000 L CNN
+F 1 "TIP127" H 8807 1255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8800 1225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 8600 1300 50  0001 L CNN
+	1    8600 1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7700 1500 7700 1850
+Wire Wire Line
+	8500 1500 8500 1850
+$Comp
+L 00-OTG-Transistor:TIP120 Q?
+U 1 1 5C9F9233
+P 8000 2950
+F 0 "Q?" H 8241 2996 50  0000 L CNN
+F 1 "TIP120" H 8241 2905 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 8250 2875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8000 2950 50  0001 L CNN
+	1    8000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx_IEEE:4049 U?
+U 1 1 5C9FA8B8
+P 7850 4150
+F 0 "U?" H 8444 4196 50  0000 L CNN
+F 1 "4049" H 8444 4105 50  0000 L CNN
+F 2 "" H 7850 4150 50  0001 C CNN
+F 3 "" H 7850 4150 50  0001 C CNN
+	1    7850 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx_IEEE:4049 U?
+U 2 1 5CA01B24
+P 7850 4850
+F 0 "U?" H 8444 4896 50  0000 L CNN
+F 1 "4049" H 8444 4805 50  0000 L CNN
+F 2 "" H 7850 4850 50  0001 C CNN
+F 3 "" H 7850 4850 50  0001 C CNN
+	2    7850 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx_IEEE:4049 U?
+U 3 1 5CA0273F
+P 7850 5550
+F 0 "U?" H 8444 5596 50  0000 L CNN
+F 1 "4049" H 8444 5505 50  0000 L CNN
+F 2 "" H 7850 5550 50  0001 C CNN
+F 3 "" H 7850 5550 50  0001 C CNN
+	3    7850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx_IEEE:4049 U?
+U 4 1 5CA0364A
+P 9300 4150
+F 0 "U?" H 9894 4196 50  0000 L CNN
+F 1 "4049" H 9894 4105 50  0000 L CNN
+F 2 "" H 9300 4150 50  0001 C CNN
+F 3 "" H 9300 4150 50  0001 C CNN
+	4    9300 4150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
