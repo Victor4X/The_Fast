@@ -26,312 +26,10 @@ F 3 "" H 2150 3600 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP120 Q2
-U 1 1 5C9DDA95
-P 9600 2050
-F 0 "Q2" H 9841 2096 50  0000 L CNN
-F 1 "TIP120" H 9841 2005 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 9850 1975 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9600 2050 50  0001 L CNN
-	1    9600 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP120 Q5
-U 1 1 5C9DFC6A
-P 10600 2050
-F 0 "Q5" H 10841 2096 50  0000 L CNN
-F 1 "TIP120" H 10841 2005 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 10850 1975 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10600 2050 50  0001 L CNN
-	1    10600 2050
-	-1   0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP127 Q4
-U 1 1 5C9E3069
-P 10600 1300
-F 0 "Q4" H 10807 1346 50  0000 L CNN
-F 1 "TIP127" H 10807 1255 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10800 1225 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 10600 1300 50  0001 L CNN
-	1    10600 1300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9700 1500 9700 1700
-Wire Wire Line
-	10500 1500 10500 1700
-$Comp
-L 00-OTG-Transistor:TIP120 Q3
-U 1 1 5C9F9233
-P 10000 2950
-F 0 "Q3" H 10241 2996 50  0000 L CNN
-F 1 "TIP120" H 10241 2905 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 10250 2875 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10000 2950 50  0001 L CNN
-	1    10000 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J5
-U 1 1 5CA04D2F
-P 10150 1700
-F 0 "J5" H 10258 1881 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10258 1790 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 10150 1700 50  0001 C CNN
-F 3 "~" H 10150 1700 50  0001 C CNN
-	1    10150 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J1
-U 1 1 5CA0628F
-P 1800 6250
-F 0 "J1" H 1908 6431 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 1908 6340 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 1800 6250 50  0001 C CNN
-F 3 "~" H 1800 6250 50  0001 C CNN
-	1    1800 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J2
-U 1 1 5CA06431
-P 1800 6650
-F 0 "J2" H 1908 6831 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 1908 6740 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 1800 6650 50  0001 C CNN
-F 3 "~" H 1800 6650 50  0001 C CNN
-	1    1800 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J3
-U 1 1 5CA067F6
-P 1800 7150
-F 0 "J3" H 1908 7331 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 1908 7240 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 1800 7150 50  0001 C CNN
-F 3 "~" H 1800 7150 50  0001 C CNN
-	1    1800 7150
-	1    0    0    -1  
-$EndComp
-Connection ~ 10500 1700
-Wire Wire Line
-	10500 1700 10500 1850
-$Comp
-L Connector:Conn_01x01_Male J4
-U 1 1 5CA08FB5
-P 10000 1700
-F 0 "J4" H 10108 1881 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10108 1790 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 10000 1700 50  0001 C CNN
-F 3 "~" H 10000 1700 50  0001 C CNN
-	1    10000 1700
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 1700 9700 1700
-Connection ~ 9700 1700
-Wire Wire Line
-	9700 1700 9700 1850
-Wire Wire Line
-	10500 2250 10500 2350
-Wire Wire Line
-	10500 2350 10100 2350
-Wire Wire Line
-	9700 2350 9700 2250
-Wire Wire Line
-	10100 2750 10100 2350
-Connection ~ 10100 2350
-Wire Wire Line
-	10100 2350 9700 2350
-Wire Wire Line
-	9700 1100 9700 1000
-Wire Wire Line
-	9700 1000 10500 1000
-Wire Wire Line
-	10500 1000 10500 1100
-$Comp
-L 4xxx:4049 U2
-U 2 1 5C9F78F9
-P 5450 5700
-F 0 "U2" H 5450 6017 50  0000 C CNN
-F 1 "4049" H 5450 5926 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5450 5700 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 5450 5700 50  0001 C CNN
-	2    5450 5700
-	0    1    1    0   
-$EndComp
-$Comp
-L 4xxx:4049 U2
-U 3 1 5C9F8635
-P 8750 5050
-F 0 "U2" H 8750 5367 50  0000 C CNN
-F 1 "4049" H 8750 5276 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 8750 5050 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 8750 5050 50  0001 C CNN
-	3    8750 5050
-	0    1    1    0   
-$EndComp
-$Comp
-L 4xxx:4049 U2
-U 4 1 5C9F9601
-P 8850 2000
-F 0 "U2" H 8850 2317 50  0000 C CNN
-F 1 "4049" H 8850 2226 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 8850 2000 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 8850 2000 50  0001 C CNN
-	4    8850 2000
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5CA1FC37
-P 10100 3250
-F 0 "#PWR?" H 10100 3000 50  0001 C CNN
-F 1 "GND" H 10105 3077 50  0000 C CNN
-F 2 "" H 10100 3250 50  0001 C CNN
-F 3 "" H 10100 3250 50  0001 C CNN
-	1    10100 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:BC547 Q?
-U 1 1 5CA21E4E
-P 9300 2650
-F 0 "Q?" H 9491 2696 50  0000 L CNN
-F 1 "BC547" H 9491 2605 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9500 2575 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 9300 2650 50  0001 L CNN
-	1    9300 2650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5CA2B23B
-P 9650 2550
-F 0 "R?" H 9720 2596 50  0000 L CNN
-F 1 "R" H 9720 2505 50  0000 L CNN
-F 2 "" V 9580 2550 50  0001 C CNN
-F 3 "~" H 9650 2550 50  0001 C CNN
-	1    9650 2550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CA2DC68
-P 10000 2550
-F 0 "J?" H 10108 2731 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10108 2640 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 10000 2550 50  0001 C CNN
-F 3 "~" H 10000 2550 50  0001 C CNN
-	1    10000 2550
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CA2DF5C
-P 10200 2550
-F 0 "J?" H 10308 2731 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10308 2640 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 10200 2550 50  0001 C CNN
-F 3 "~" H 10200 2550 50  0001 C CNN
-	1    10200 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:BC547 Q?
-U 1 1 5CA24544
-P 9100 1250
-F 0 "Q?" H 9291 1296 50  0000 L CNN
-F 1 "BC547" H 9291 1205 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9300 1175 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 9100 1250 50  0001 L CNN
-	1    9100 1250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10900 900  10900 1300
-Wire Wire Line
-	10900 1300 10800 1300
-$Comp
-L Device:R R?
-U 1 1 5CA2A427
-P 9200 1600
-F 0 "R?" H 9270 1646 50  0000 L CNN
-F 1 "R" H 9270 1555 50  0000 L CNN
-F 2 "" V 9130 1600 50  0001 C CNN
-F 3 "~" H 9200 1600 50  0001 C CNN
-	1    9200 1600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9400 2050 9200 2050
-Wire Wire Line
-	10400 2550 10900 2550
-Wire Wire Line
-	10900 2550 10900 2050
-Wire Wire Line
-	10900 2050 10800 2050
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CA46ACD
-P 9400 2150
-F 0 "J?" H 9508 2331 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 9508 2240 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9400 2150 50  0001 C CNN
-F 3 "~" H 9400 2150 50  0001 C CNN
-	1    9400 2150
-	0    -1   1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CA4742B
-P 9400 1950
-F 0 "J?" H 9508 2131 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 9508 2040 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9400 1950 50  0001 C CNN
-F 3 "~" H 9400 1950 50  0001 C CNN
-	1    9400 1950
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	10350 1700 10500 1700
-$Comp
-L Device:R R?
-U 1 1 5CA4C2DB
-P 9650 2950
-F 0 "R?" H 9720 2996 50  0000 L CNN
-F 1 "R" H 9720 2905 50  0000 L CNN
-F 2 "" V 9580 2950 50  0001 C CNN
-F 3 "~" H 9650 2950 50  0001 C CNN
-	1    9650 2950
-	0    -1   -1   0   
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP127 Q1
-U 1 1 5C9E1CCC
-P 9600 1300
-F 0 "Q1" H 9807 1346 50  0000 L CNN
-F 1 "TIP127" H 9807 1255 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9800 1225 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 9600 1300 50  0001 L CNN
-	1    9600 1300
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	9300 2850 8850 2850
-Wire Wire Line
-	8850 2850 8850 2300
-Wire Wire Line
-	10100 3250 10100 3150
-$Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5CA75A42
 P 700 4800
-F 0 "#PWR?" H 700 4550 50  0001 C CNN
+F 0 "#PWR0101" H 700 4550 50  0001 C CNN
 F 1 "GND" H 705 4627 50  0000 C CNN
 F 2 "" H 700 4800 50  0001 C CNN
 F 3 "" H 700 4800 50  0001 C CNN
@@ -341,506 +39,10 @@ $EndComp
 Wire Wire Line
 	700  4800 1050 4800
 $Comp
-L 00-OTG-Transistor:TIP120 Q?
-U 1 1 5CADC98E
-P 9500 5100
-F 0 "Q?" H 9741 5146 50  0000 L CNN
-F 1 "TIP120" H 9741 5055 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 9750 5025 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9500 5100 50  0001 L CNN
-	1    9500 5100
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP120 Q?
-U 1 1 5CADC994
-P 10500 5100
-F 0 "Q?" H 10741 5146 50  0000 L CNN
-F 1 "TIP120" H 10741 5055 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 10750 5025 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 10500 5100 50  0001 L CNN
-	1    10500 5100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP127 Q?
-U 1 1 5CADC99A
-P 10500 4350
-F 0 "Q?" H 10707 4396 50  0000 L CNN
-F 1 "TIP127" H 10707 4305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10700 4275 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 10500 4350 50  0001 L CNN
-	1    10500 4350
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9600 4550 9600 4750
-Wire Wire Line
-	10400 4550 10400 4750
-$Comp
-L 00-OTG-Transistor:TIP120 Q?
-U 1 1 5CADC9A2
-P 9900 6000
-F 0 "Q?" H 10141 6046 50  0000 L CNN
-F 1 "TIP120" H 10141 5955 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 10150 5925 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9900 6000 50  0001 L CNN
-	1    9900 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CADC9A8
-P 10050 4750
-F 0 "J?" H 10158 4931 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10158 4840 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 10050 4750 50  0001 C CNN
-F 3 "~" H 10050 4750 50  0001 C CNN
-	1    10050 4750
-	1    0    0    -1  
-$EndComp
-Connection ~ 10400 4750
-Wire Wire Line
-	10400 4750 10400 4900
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CADC9B0
-P 9900 4750
-F 0 "J?" H 10008 4931 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10008 4840 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9900 4750 50  0001 C CNN
-F 3 "~" H 9900 4750 50  0001 C CNN
-	1    9900 4750
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	9700 4750 9600 4750
-Connection ~ 9600 4750
-Wire Wire Line
-	9600 4750 9600 4900
-Wire Wire Line
-	10400 5300 10400 5400
-Wire Wire Line
-	10400 5400 10000 5400
-Wire Wire Line
-	9600 5400 9600 5300
-Wire Wire Line
-	10000 5800 10000 5400
-Connection ~ 10000 5400
-Wire Wire Line
-	10000 5400 9600 5400
-Wire Wire Line
-	9600 4150 9600 4050
-Wire Wire Line
-	9600 4050 10400 4050
-Wire Wire Line
-	10400 4050 10400 4150
-$Comp
-L power:GND #PWR?
-U 1 1 5CADC9C8
-P 10000 6300
-F 0 "#PWR?" H 10000 6050 50  0001 C CNN
-F 1 "GND" H 10005 6127 50  0000 C CNN
-F 2 "" H 10000 6300 50  0001 C CNN
-F 3 "" H 10000 6300 50  0001 C CNN
-	1    10000 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:BC547 Q?
-U 1 1 5CADC9CE
-P 9200 5700
-F 0 "Q?" H 9391 5746 50  0000 L CNN
-F 1 "BC547" H 9391 5655 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9400 5625 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 9200 5700 50  0001 L CNN
-	1    9200 5700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5CADC9D4
-P 9550 5600
-F 0 "R?" H 9620 5646 50  0000 L CNN
-F 1 "R" H 9620 5555 50  0000 L CNN
-F 2 "" V 9480 5600 50  0001 C CNN
-F 3 "~" H 9550 5600 50  0001 C CNN
-	1    9550 5600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CADC9DA
-P 9900 5600
-F 0 "J?" H 10008 5781 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10008 5690 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9900 5600 50  0001 C CNN
-F 3 "~" H 9900 5600 50  0001 C CNN
-	1    9900 5600
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CADC9E0
-P 10100 5600
-F 0 "J?" H 10208 5781 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 10208 5690 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 10100 5600 50  0001 C CNN
-F 3 "~" H 10100 5600 50  0001 C CNN
-	1    10100 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:BC547 Q?
-U 1 1 5CADC9E6
-P 9000 4500
-F 0 "Q?" H 9191 4546 50  0000 L CNN
-F 1 "BC547" H 9191 4455 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 9200 4425 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 9000 4500 50  0001 L CNN
-	1    9000 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9100 4300 9100 3950
-Wire Wire Line
-	9100 3950 10800 3950
-Wire Wire Line
-	10800 3950 10800 4350
-Wire Wire Line
-	10800 4350 10700 4350
-$Comp
-L Device:R R?
-U 1 1 5CADC9F0
-P 9100 4850
-F 0 "R?" H 9170 4896 50  0000 L CNN
-F 1 "R" H 9170 4805 50  0000 L CNN
-F 2 "" V 9030 4850 50  0001 C CNN
-F 3 "~" H 9100 4850 50  0001 C CNN
-	1    9100 4850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9300 5100 9100 5100
-Wire Wire Line
-	9100 5100 9100 5000
-Wire Wire Line
-	10300 5600 10800 5600
-Wire Wire Line
-	10800 5600 10800 5100
-Wire Wire Line
-	10800 5100 10700 5100
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CADC9FB
-P 9300 5200
-F 0 "J?" H 9408 5381 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 9408 5290 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9300 5200 50  0001 C CNN
-F 3 "~" H 9300 5200 50  0001 C CNN
-	1    9300 5200
-	0    -1   1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CADCA01
-P 9300 5000
-F 0 "J?" H 9408 5181 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 9408 5090 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9300 5000 50  0001 C CNN
-F 3 "~" H 9300 5000 50  0001 C CNN
-	1    9300 5000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	10250 4750 10400 4750
-$Comp
-L Device:R R?
-U 1 1 5CADCA08
-P 9550 6000
-F 0 "R?" H 9620 6046 50  0000 L CNN
-F 1 "R" H 9620 5955 50  0000 L CNN
-F 2 "" V 9480 6000 50  0001 C CNN
-F 3 "~" H 9550 6000 50  0001 C CNN
-	1    9550 6000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP127 Q?
-U 1 1 5CADCA0E
-P 9500 4350
-F 0 "Q?" H 9707 4396 50  0000 L CNN
-F 1 "TIP127" H 9707 4305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9700 4275 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 9500 4350 50  0001 L CNN
-	1    9500 4350
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	9000 5600 9000 5400
-Wire Wire Line
-	9000 5400 9300 5400
-Wire Wire Line
-	9200 5900 8750 5900
-Wire Wire Line
-	8750 5900 8750 5350
-Wire Wire Line
-	8800 4500 8750 4500
-Wire Wire Line
-	10000 6300 10000 6200
-$Comp
-L 00-OTG-Transistor:TIP120 Q?
-U 1 1 5CAE0909
-P 6200 5750
-F 0 "Q?" H 6441 5796 50  0000 L CNN
-F 1 "TIP120" H 6441 5705 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6450 5675 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6200 5750 50  0001 L CNN
-	1    6200 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP120 Q?
-U 1 1 5CAE090F
-P 7200 5750
-F 0 "Q?" H 7441 5796 50  0000 L CNN
-F 1 "TIP120" H 7441 5705 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 7450 5675 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 7200 5750 50  0001 L CNN
-	1    7200 5750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP127 Q?
-U 1 1 5CAE0915
-P 7200 5000
-F 0 "Q?" H 7407 5046 50  0000 L CNN
-F 1 "TIP127" H 7407 4955 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7400 4925 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 7200 5000 50  0001 L CNN
-	1    7200 5000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6300 5200 6300 5400
-Wire Wire Line
-	7100 5200 7100 5400
-$Comp
-L 00-OTG-Transistor:TIP120 Q?
-U 1 1 5CAE091D
-P 6600 6650
-F 0 "Q?" H 6841 6696 50  0000 L CNN
-F 1 "TIP120" H 6841 6605 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6850 6575 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6600 6650 50  0001 L CNN
-	1    6600 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CAE0923
-P 6750 5400
-F 0 "J?" H 6858 5581 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 6858 5490 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6750 5400 50  0001 C CNN
-F 3 "~" H 6750 5400 50  0001 C CNN
-	1    6750 5400
-	1    0    0    -1  
-$EndComp
-Connection ~ 7100 5400
-Wire Wire Line
-	7100 5400 7100 5550
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CAE092B
-P 6600 5400
-F 0 "J?" H 6708 5581 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 6708 5490 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6600 5400 50  0001 C CNN
-F 3 "~" H 6600 5400 50  0001 C CNN
-	1    6600 5400
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 5400 6300 5400
-Connection ~ 6300 5400
-Wire Wire Line
-	6300 5400 6300 5550
-Wire Wire Line
-	7100 5950 7100 6050
-Wire Wire Line
-	7100 6050 6700 6050
-Wire Wire Line
-	6300 6050 6300 5950
-Wire Wire Line
-	6700 6450 6700 6050
-Connection ~ 6700 6050
-Wire Wire Line
-	6700 6050 6300 6050
-Wire Wire Line
-	6300 4800 6300 4700
-Wire Wire Line
-	6300 4700 7100 4700
-Wire Wire Line
-	7100 4700 7100 4800
-$Comp
-L power:GND #PWR?
-U 1 1 5CAE0943
-P 6700 6950
-F 0 "#PWR?" H 6700 6700 50  0001 C CNN
-F 1 "GND" H 6705 6777 50  0000 C CNN
-F 2 "" H 6700 6950 50  0001 C CNN
-F 3 "" H 6700 6950 50  0001 C CNN
-	1    6700 6950
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:BC547 Q?
-U 1 1 5CAE0949
-P 5900 6350
-F 0 "Q?" H 6091 6396 50  0000 L CNN
-F 1 "BC547" H 6091 6305 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6100 6275 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5900 6350 50  0001 L CNN
-	1    5900 6350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5CAE094F
-P 6250 6250
-F 0 "R?" H 6320 6296 50  0000 L CNN
-F 1 "R" H 6320 6205 50  0000 L CNN
-F 2 "" V 6180 6250 50  0001 C CNN
-F 3 "~" H 6250 6250 50  0001 C CNN
-	1    6250 6250
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CAE0955
-P 6600 6250
-F 0 "J?" H 6708 6431 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 6708 6340 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6600 6250 50  0001 C CNN
-F 3 "~" H 6600 6250 50  0001 C CNN
-	1    6600 6250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CAE095B
-P 6800 6250
-F 0 "J?" H 6908 6431 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 6908 6340 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6800 6250 50  0001 C CNN
-F 3 "~" H 6800 6250 50  0001 C CNN
-	1    6800 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:BC547 Q?
-U 1 1 5CAE0961
-P 5700 5150
-F 0 "Q?" H 5891 5196 50  0000 L CNN
-F 1 "BC547" H 5891 5105 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5900 5075 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5700 5150 50  0001 L CNN
-	1    5700 5150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 4950 5800 4600
-Wire Wire Line
-	5800 4600 7500 4600
-Wire Wire Line
-	7500 4600 7500 5000
-Wire Wire Line
-	7500 5000 7400 5000
-$Comp
-L Device:R R?
-U 1 1 5CAE096B
-P 5800 5500
-F 0 "R?" H 5870 5546 50  0000 L CNN
-F 1 "R" H 5870 5455 50  0000 L CNN
-F 2 "" V 5730 5500 50  0001 C CNN
-F 3 "~" H 5800 5500 50  0001 C CNN
-	1    5800 5500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 5750 5800 5750
-Wire Wire Line
-	5800 5750 5800 5650
-Wire Wire Line
-	7000 6250 7500 6250
-Wire Wire Line
-	7500 6250 7500 5750
-Wire Wire Line
-	7500 5750 7400 5750
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CAE0976
-P 6000 5850
-F 0 "J?" H 6108 6031 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 6108 5940 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6000 5850 50  0001 C CNN
-F 3 "~" H 6000 5850 50  0001 C CNN
-	1    6000 5850
-	0    -1   1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J?
-U 1 1 5CAE097C
-P 6000 5650
-F 0 "J?" H 6108 5831 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 6108 5740 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6000 5650 50  0001 C CNN
-F 3 "~" H 6000 5650 50  0001 C CNN
-	1    6000 5650
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6950 5400 7100 5400
-$Comp
-L Device:R R?
-U 1 1 5CAE0983
-P 6250 6650
-F 0 "R?" H 6320 6696 50  0000 L CNN
-F 1 "R" H 6320 6605 50  0000 L CNN
-F 2 "" V 6180 6650 50  0001 C CNN
-F 3 "~" H 6250 6650 50  0001 C CNN
-	1    6250 6650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L 00-OTG-Transistor:TIP127 Q?
-U 1 1 5CAE0989
-P 6200 5000
-F 0 "Q?" H 6407 5046 50  0000 L CNN
-F 1 "TIP127" H 6407 4955 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6400 4925 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 6200 5000 50  0001 L CNN
-	1    6200 5000
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	5700 6250 5700 6050
-Wire Wire Line
-	5700 6050 6000 6050
-Wire Wire Line
-	5900 6550 5450 6550
-Wire Wire Line
-	5450 6550 5450 6000
-Wire Wire Line
-	5500 5150 5450 5150
-Wire Wire Line
-	6700 6950 6700 6850
-$Comp
-L 00-OTG-Transistor:TIP120 Q?
+L 00-OTG-Transistor:TIP120 Q8
 U 1 1 5CAEA18F
 P 6000 2400
-F 0 "Q?" H 6241 2446 50  0000 L CNN
+F 0 "Q8" H 6241 2446 50  0000 L CNN
 F 1 "TIP120" H 6241 2355 50  0000 L CNN
 F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6250 2325 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6000 2400 50  0001 L CNN
@@ -848,36 +50,25 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6000 2400 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP120 Q?
+L 00-OTG-Transistor:TIP120 Q14
 U 1 1 5CAEA195
 P 7000 2400
-F 0 "Q?" H 7241 2446 50  0000 L CNN
+F 0 "Q14" H 7241 2446 50  0000 L CNN
 F 1 "TIP120" H 7241 2355 50  0000 L CNN
 F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 7250 2325 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 7000 2400 50  0001 L CNN
 	1    7000 2400
 	-1   0    0    -1  
 $EndComp
-$Comp
-L 00-OTG-Transistor:TIP127 Q?
-U 1 1 5CAEA19B
-P 7000 1650
-F 0 "Q?" H 7207 1696 50  0000 L CNN
-F 1 "TIP127" H 7207 1605 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7200 1575 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 7000 1650 50  0001 L CNN
-	1    7000 1650
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	6100 1850 6100 2050
 Wire Wire Line
 	6900 1850 6900 2050
 $Comp
-L 00-OTG-Transistor:TIP120 Q?
+L 00-OTG-Transistor:TIP120 Q10
 U 1 1 5CAEA1A3
 P 6400 3300
-F 0 "Q?" H 6641 3346 50  0000 L CNN
+F 0 "Q10" H 6641 3346 50  0000 L CNN
 F 1 "TIP120" H 6641 3255 50  0000 L CNN
 F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6650 3225 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6400 3300 50  0001 L CNN
@@ -885,10 +76,10 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6400 3300 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Male J?
+L Connector:Conn_01x01_Male J14
 U 1 1 5CAEA1A9
 P 6550 2050
-F 0 "J?" H 6658 2231 50  0000 C CNN
+F 0 "J14" H 6658 2231 50  0000 C CNN
 F 1 "Conn_01x01_Male" H 6658 2140 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6550 2050 50  0001 C CNN
 F 3 "~" H 6550 2050 50  0001 C CNN
@@ -899,10 +90,10 @@ Connection ~ 6900 2050
 Wire Wire Line
 	6900 2050 6900 2200
 $Comp
-L Connector:Conn_01x01_Male J?
+L Connector:Conn_01x01_Male J12
 U 1 1 5CAEA1B1
 P 6400 2050
-F 0 "J?" H 6508 2231 50  0000 C CNN
+F 0 "J12" H 6508 2231 50  0000 C CNN
 F 1 "Conn_01x01_Male" H 6508 2140 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6400 2050 50  0001 C CNN
 F 3 "~" H 6400 2050 50  0001 C CNN
@@ -928,36 +119,12 @@ Wire Wire Line
 Wire Wire Line
 	6100 1450 6100 1350
 Wire Wire Line
-	6100 1350 6900 1350
-Wire Wire Line
 	6900 1350 6900 1450
 $Comp
-L 4xxx:4049 U?
-U 1 1 5CAEA1C3
-P 5250 2350
-F 0 "U?" H 5250 2667 50  0000 C CNN
-F 1 "4049" H 5250 2576 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5250 2350 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 5250 2350 50  0001 C CNN
-	1    5250 2350
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5CAEA1C9
-P 6500 3600
-F 0 "#PWR?" H 6500 3350 50  0001 C CNN
-F 1 "GND" H 6505 3427 50  0000 C CNN
-F 2 "" H 6500 3600 50  0001 C CNN
-F 3 "" H 6500 3600 50  0001 C CNN
-	1    6500 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 00-OTG-Transistor:BC547 Q?
+L 00-OTG-Transistor:BC547 Q6
 U 1 1 5CAEA1CF
 P 5700 3000
-F 0 "Q?" H 5891 3046 50  0000 L CNN
+F 0 "Q6" H 5891 3046 50  0000 L CNN
 F 1 "BC547" H 5891 2955 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5900 2925 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5700 3000 50  0001 L CNN
@@ -965,10 +132,10 @@ F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5700 3000 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5CAEA1D5
 P 6050 2900
-F 0 "R?" H 6120 2946 50  0000 L CNN
+F 0 "R5" H 6120 2946 50  0000 L CNN
 F 1 "R" H 6120 2855 50  0000 L CNN
 F 2 "" V 5980 2900 50  0001 C CNN
 F 3 "~" H 6050 2900 50  0001 C CNN
@@ -976,10 +143,10 @@ F 3 "~" H 6050 2900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Male J?
+L Connector:Conn_01x01_Male J13
 U 1 1 5CAEA1DB
 P 6400 2900
-F 0 "J?" H 6508 3081 50  0000 C CNN
+F 0 "J13" H 6508 3081 50  0000 C CNN
 F 1 "Conn_01x01_Male" H 6508 2990 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6400 2900 50  0001 C CNN
 F 3 "~" H 6400 2900 50  0001 C CNN
@@ -987,10 +154,10 @@ F 3 "~" H 6400 2900 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Male J?
+L Connector:Conn_01x01_Male J16
 U 1 1 5CAEA1E1
 P 6600 2900
-F 0 "J?" H 6708 3081 50  0000 C CNN
+F 0 "J16" H 6708 3081 50  0000 C CNN
 F 1 "Conn_01x01_Male" H 6708 2990 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6600 2900 50  0001 C CNN
 F 3 "~" H 6600 2900 50  0001 C CNN
@@ -998,10 +165,10 @@ F 3 "~" H 6600 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:BC547 Q?
+L 00-OTG-Transistor:BC547 Q3
 U 1 1 5CAEA1E7
 P 5500 1800
-F 0 "Q?" H 5691 1846 50  0000 L CNN
+F 0 "Q3" H 5691 1846 50  0000 L CNN
 F 1 "BC547" H 5691 1755 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5700 1725 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5500 1800 50  0001 L CNN
@@ -1011,16 +178,12 @@ $EndComp
 Wire Wire Line
 	5600 1600 5600 1250
 Wire Wire Line
-	5600 1250 7300 1250
-Wire Wire Line
 	7300 1250 7300 1650
-Wire Wire Line
-	7300 1650 7200 1650
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5CAEA1F1
 P 5600 2150
-F 0 "R?" H 5670 2196 50  0000 L CNN
+F 0 "R2" H 5670 2196 50  0000 L CNN
 F 1 "R" H 5670 2105 50  0000 L CNN
 F 2 "" V 5530 2150 50  0001 C CNN
 F 3 "~" H 5600 2150 50  0001 C CNN
@@ -1038,10 +201,10 @@ Wire Wire Line
 Wire Wire Line
 	7300 2400 7200 2400
 $Comp
-L Connector:Conn_01x01_Male J?
+L Connector:Conn_01x01_Male J4
 U 1 1 5CAEA1FC
 P 5800 2500
-F 0 "J?" H 5908 2681 50  0000 C CNN
+F 0 "J4" H 5908 2681 50  0000 C CNN
 F 1 "Conn_01x01_Male" H 5908 2590 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 5800 2500 50  0001 C CNN
 F 3 "~" H 5800 2500 50  0001 C CNN
@@ -1049,10 +212,10 @@ F 3 "~" H 5800 2500 50  0001 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Male J?
+L Connector:Conn_01x01_Male J3
 U 1 1 5CAEA202
 P 5800 2300
-F 0 "J?" H 5908 2481 50  0000 C CNN
+F 0 "J3" H 5908 2481 50  0000 C CNN
 F 1 "Conn_01x01_Male" H 5908 2390 50  0000 C CNN
 F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 5800 2300 50  0001 C CNN
 F 3 "~" H 5800 2300 50  0001 C CNN
@@ -1062,10 +225,10 @@ $EndComp
 Wire Wire Line
 	6750 2050 6900 2050
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 5CAEA209
 P 6050 3300
-F 0 "R?" H 6120 3346 50  0000 L CNN
+F 0 "R6" H 6120 3346 50  0000 L CNN
 F 1 "R" H 6120 3255 50  0000 L CNN
 F 2 "" V 5980 3300 50  0001 C CNN
 F 3 "~" H 6050 3300 50  0001 C CNN
@@ -1073,10 +236,10 @@ F 3 "~" H 6050 3300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP127 Q?
+L 00-OTG-Transistor:TIP127 Q7
 U 1 1 5CAEA20F
 P 6000 1650
-F 0 "Q?" H 6207 1696 50  0000 L CNN
+F 0 "Q7" H 6207 1696 50  0000 L CNN
 F 1 "TIP127" H 6207 1605 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6200 1575 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 6000 1650 50  0001 L CNN
@@ -1096,25 +259,1151 @@ Wire Wire Line
 Wire Wire Line
 	6500 3600 6500 3500
 Wire Wire Line
-	5250 1800 5250 2050
+	5250 1800 5250 1900
+$Comp
+L Regulator_Linear:LM7805_TO220 U2
+U 1 1 5CA3A1F0
+P 2850 1350
+F 0 "U2" H 2850 1592 50  0000 C CNN
+F 1 "LM7805_TO220" H 2850 1501 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2850 1575 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 2850 1300 50  0001 C CNN
+	1    2850 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5CA3E782
+P 3450 1150
+F 0 "C2" H 3565 1196 50  0000 L CNN
+F 1 "C" H 3565 1105 50  0000 L CNN
+F 2 "footprints otg:C_5.00mm" H 3488 1000 50  0001 C CNN
+F 3 "~" H 3450 1150 50  0001 C CNN
+	1    3450 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5CA3FF12
+P 2350 1150
+F 0 "C1" H 2465 1196 50  0000 L CNN
+F 1 "C" H 2465 1105 50  0000 L CNN
+F 2 "footprints otg:C_5.00mm" H 2388 1000 50  0001 C CNN
+F 3 "~" H 2350 1150 50  0001 C CNN
+	1    2350 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5CA41279
+P 3900 1200
+F 0 "#PWR0102" H 3900 1050 50  0001 C CNN
+F 1 "VCC" H 3917 1373 50  0000 C CNN
+F 2 "" H 3900 1200 50  0001 C CNN
+F 3 "" H 3900 1200 50  0001 C CNN
+	1    3900 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5CA433F6
+P 6500 1000
+F 0 "#PWR0103" H 6500 850 50  0001 C CNN
+F 1 "VCC" H 6517 1173 50  0000 C CNN
+F 2 "" H 6500 1000 50  0001 C CNN
+F 3 "" H 6500 1000 50  0001 C CNN
+	1    6500 1000
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	8750 4500 8750 4750
+	6100 1350 6500 1350
+$Comp
+L Connector:Conn_01x01_Male J15
+U 1 1 5CA46E6B
+P 6600 1250
+F 0 "J15" H 6708 1431 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6708 1340 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6600 1250 50  0001 C CNN
+F 3 "~" H 6600 1250 50  0001 C CNN
+	1    6600 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J11
+U 1 1 5CA46E71
+P 6400 1250
+F 0 "J11" H 6508 1431 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6508 1340 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6400 1250 50  0001 C CNN
+F 3 "~" H 6400 1250 50  0001 C CNN
+	1    6400 1250
+	-1   0    0    -1  
+$EndComp
 Wire Wire Line
-	5450 5150 5450 5400
+	7300 1650 7200 1650
+$Comp
+L 00-OTG-Transistor:TIP127 Q13
+U 1 1 5CAEA19B
+P 7000 1650
+F 0 "Q13" H 7207 1696 50  0000 L CNN
+F 1 "TIP127" H 7207 1605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7200 1575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 7000 1650 50  0001 L CNN
+	1    7000 1650
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	9400 1750 9400 1300
+	5800 2100 5800 1650
 Wire Wire Line
-	9200 1750 9200 2050
+	6200 1250 5600 1250
 Wire Wire Line
-	8900 1250 8850 1250
+	7300 1250 6800 1250
 Wire Wire Line
-	8850 1250 8850 1700
+	6500 1000 6500 1350
+Connection ~ 6500 1350
 Wire Wire Line
-	9200 1050 9200 900 
+	6500 1350 6900 1350
+$Comp
+L 00-OTG-Transistor:TIP120 Q22
+U 1 1 5CB310CA
+P 8950 2200
+F 0 "Q22" H 9191 2246 50  0000 L CNN
+F 1 "TIP120" H 9191 2155 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 9200 2125 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8950 2200 50  0001 L CNN
+	1    8950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP120 Q28
+U 1 1 5CB310D0
+P 9950 2200
+F 0 "Q28" H 10191 2246 50  0000 L CNN
+F 1 "TIP120" H 10191 2155 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 10200 2125 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9950 2200 50  0001 L CNN
+	1    9950 2200
+	-1   0    0    -1  
+$EndComp
 Wire Wire Line
-	9200 900  10900 900 
+	9050 1650 9050 1850
 Wire Wire Line
-	9100 2550 9100 2350
+	9850 1650 9850 1850
+$Comp
+L 00-OTG-Transistor:TIP120 Q24
+U 1 1 5CB310D8
+P 9350 3100
+F 0 "Q24" H 9591 3146 50  0000 L CNN
+F 1 "TIP120" H 9591 3055 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 9600 3025 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9350 3100 50  0001 L CNN
+	1    9350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J30
+U 1 1 5CB310DE
+P 9500 1850
+F 0 "J30" H 9608 2031 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9608 1940 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9500 1850 50  0001 C CNN
+F 3 "~" H 9500 1850 50  0001 C CNN
+	1    9500 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 1850
 Wire Wire Line
-	9100 2350 9400 2350
+	9850 1850 9850 2000
+$Comp
+L Connector:Conn_01x01_Male J28
+U 1 1 5CB310E6
+P 9350 1850
+F 0 "J28" H 9458 2031 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9458 1940 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9350 1850 50  0001 C CNN
+F 3 "~" H 9350 1850 50  0001 C CNN
+	1    9350 1850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 1850 9050 1850
+Connection ~ 9050 1850
+Wire Wire Line
+	9050 1850 9050 2000
+Wire Wire Line
+	9850 2400 9850 2500
+Wire Wire Line
+	9850 2500 9450 2500
+Wire Wire Line
+	9050 2500 9050 2400
+Wire Wire Line
+	9450 2900 9450 2500
+Connection ~ 9450 2500
+Wire Wire Line
+	9450 2500 9050 2500
+Wire Wire Line
+	9050 1250 9050 1150
+Wire Wire Line
+	9850 1150 9850 1250
+$Comp
+L power:GND #PWR0104
+U 1 1 5CB310FD
+P 9450 3400
+F 0 "#PWR0104" H 9450 3150 50  0001 C CNN
+F 1 "GND" H 9455 3227 50  0000 C CNN
+F 2 "" H 9450 3400 50  0001 C CNN
+F 3 "" H 9450 3400 50  0001 C CNN
+	1    9450 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:BC547 Q20
+U 1 1 5CB31103
+P 8650 2800
+F 0 "Q20" H 8841 2846 50  0000 L CNN
+F 1 "BC547" H 8841 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8850 2725 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8650 2800 50  0001 L CNN
+	1    8650 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5CB31109
+P 9000 2700
+F 0 "R11" H 9070 2746 50  0000 L CNN
+F 1 "R" H 9070 2655 50  0000 L CNN
+F 2 "" V 8930 2700 50  0001 C CNN
+F 3 "~" H 9000 2700 50  0001 C CNN
+	1    9000 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J29
+U 1 1 5CB3110F
+P 9350 2700
+F 0 "J29" H 9458 2881 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9458 2790 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9350 2700 50  0001 C CNN
+F 3 "~" H 9350 2700 50  0001 C CNN
+	1    9350 2700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J32
+U 1 1 5CB31115
+P 9550 2700
+F 0 "J32" H 9658 2881 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9658 2790 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9550 2700 50  0001 C CNN
+F 3 "~" H 9550 2700 50  0001 C CNN
+	1    9550 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:BC547 Q17
+U 1 1 5CB3111B
+P 8450 1600
+F 0 "Q17" H 8641 1646 50  0000 L CNN
+F 1 "BC547" H 8641 1555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8650 1525 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8450 1600 50  0001 L CNN
+	1    8450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 1400 8550 1050
+Wire Wire Line
+	10250 1050 10250 1450
+$Comp
+L Device:R R8
+U 1 1 5CB31123
+P 8550 1950
+F 0 "R8" H 8620 1996 50  0000 L CNN
+F 1 "R" H 8620 1905 50  0000 L CNN
+F 2 "" V 8480 1950 50  0001 C CNN
+F 3 "~" H 8550 1950 50  0001 C CNN
+	1    8550 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2200 8550 2200
+Wire Wire Line
+	8550 2200 8550 2100
+Wire Wire Line
+	9750 2700 10250 2700
+Wire Wire Line
+	10250 2700 10250 2200
+Wire Wire Line
+	10250 2200 10150 2200
+$Comp
+L Connector:Conn_01x01_Male J20
+U 1 1 5CB3112E
+P 8750 2300
+F 0 "J20" H 8858 2481 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 8858 2390 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8750 2300 50  0001 C CNN
+F 3 "~" H 8750 2300 50  0001 C CNN
+	1    8750 2300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J19
+U 1 1 5CB31134
+P 8750 2100
+F 0 "J19" H 8858 2281 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 8858 2190 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8750 2100 50  0001 C CNN
+F 3 "~" H 8750 2100 50  0001 C CNN
+	1    8750 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9700 1850 9850 1850
+$Comp
+L Device:R R12
+U 1 1 5CB3113B
+P 9000 3100
+F 0 "R12" H 9070 3146 50  0000 L CNN
+F 1 "R" H 9070 3055 50  0000 L CNN
+F 2 "" V 8930 3100 50  0001 C CNN
+F 3 "~" H 9000 3100 50  0001 C CNN
+	1    9000 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP127 Q21
+U 1 1 5CB31141
+P 8950 1450
+F 0 "Q21" H 9157 1496 50  0000 L CNN
+F 1 "TIP127" H 9157 1405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9150 1375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 8950 1450 50  0001 L CNN
+	1    8950 1450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8450 2700 8450 2500
+Wire Wire Line
+	8450 2500 8750 2500
+Wire Wire Line
+	8650 3000 8200 3000
+Wire Wire Line
+	8200 3000 8200 2450
+Wire Wire Line
+	8250 1600 8200 1600
+Wire Wire Line
+	9450 3400 9450 3300
+Wire Wire Line
+	8200 1600 8200 1750
+$Comp
+L power:VCC #PWR0105
+U 1 1 5CB3114E
+P 9450 800
+F 0 "#PWR0105" H 9450 650 50  0001 C CNN
+F 1 "VCC" H 9467 973 50  0000 C CNN
+F 2 "" H 9450 800 50  0001 C CNN
+F 3 "" H 9450 800 50  0001 C CNN
+	1    9450 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 1150 9450 1150
+$Comp
+L Connector:Conn_01x01_Male J31
+U 1 1 5CB31155
+P 9550 1050
+F 0 "J31" H 9658 1231 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9658 1140 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9550 1050 50  0001 C CNN
+F 3 "~" H 9550 1050 50  0001 C CNN
+	1    9550 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J27
+U 1 1 5CB3115B
+P 9350 1050
+F 0 "J27" H 9458 1231 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9458 1140 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9350 1050 50  0001 C CNN
+F 3 "~" H 9350 1050 50  0001 C CNN
+	1    9350 1050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 1450 10150 1450
+$Comp
+L 00-OTG-Transistor:TIP127 Q27
+U 1 1 5CB31162
+P 9950 1450
+F 0 "Q27" H 10157 1496 50  0000 L CNN
+F 1 "TIP127" H 10157 1405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10150 1375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 9950 1450 50  0001 L CNN
+	1    9950 1450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8750 1900 8750 1450
+Wire Wire Line
+	9150 1050 8550 1050
+Wire Wire Line
+	10250 1050 9750 1050
+Wire Wire Line
+	9450 800  9450 1150
+Connection ~ 9450 1150
+Wire Wire Line
+	9450 1150 9850 1150
+$Comp
+L 00-OTG-Transistor:TIP120 Q19
+U 1 1 5CB515B6
+P 8550 5050
+F 0 "Q19" H 8791 5096 50  0000 L CNN
+F 1 "TIP120" H 8791 5005 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 8800 4975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8550 5050 50  0001 L CNN
+	1    8550 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP120 Q26
+U 1 1 5CB515BC
+P 9550 5050
+F 0 "Q26" H 9791 5096 50  0000 L CNN
+F 1 "TIP120" H 9791 5005 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 9800 4975 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9550 5050 50  0001 L CNN
+	1    9550 5050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 4500 8650 4700
+Wire Wire Line
+	9450 4500 9450 4700
+$Comp
+L 00-OTG-Transistor:TIP120 Q23
+U 1 1 5CB515C4
+P 8950 5950
+F 0 "Q23" H 9191 5996 50  0000 L CNN
+F 1 "TIP120" H 9191 5905 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 9200 5875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8950 5950 50  0001 L CNN
+	1    8950 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J24
+U 1 1 5CB515CA
+P 9100 4700
+F 0 "J24" H 9208 4881 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9208 4790 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9100 4700 50  0001 C CNN
+F 3 "~" H 9100 4700 50  0001 C CNN
+	1    9100 4700
+	1    0    0    -1  
+$EndComp
+Connection ~ 9450 4700
+Wire Wire Line
+	9450 4700 9450 4850
+$Comp
+L Connector:Conn_01x01_Male J22
+U 1 1 5CB515D2
+P 8950 4700
+F 0 "J22" H 9058 4881 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9058 4790 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8950 4700 50  0001 C CNN
+F 3 "~" H 8950 4700 50  0001 C CNN
+	1    8950 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4700 8650 4700
+Connection ~ 8650 4700
+Wire Wire Line
+	8650 4700 8650 4850
+Wire Wire Line
+	9450 5250 9450 5350
+Wire Wire Line
+	9450 5350 9050 5350
+Wire Wire Line
+	8650 5350 8650 5250
+Wire Wire Line
+	9050 5750 9050 5350
+Connection ~ 9050 5350
+Wire Wire Line
+	9050 5350 8650 5350
+Wire Wire Line
+	8650 4100 8650 4000
+Wire Wire Line
+	9450 4000 9450 4100
+$Comp
+L power:GND #PWR0106
+U 1 1 5CB515E9
+P 9050 6250
+F 0 "#PWR0106" H 9050 6000 50  0001 C CNN
+F 1 "GND" H 9055 6077 50  0000 C CNN
+F 2 "" H 9050 6250 50  0001 C CNN
+F 3 "" H 9050 6250 50  0001 C CNN
+	1    9050 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:BC547 Q16
+U 1 1 5CB515EF
+P 8250 5650
+F 0 "Q16" H 8441 5696 50  0000 L CNN
+F 1 "BC547" H 8441 5605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8450 5575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8250 5650 50  0001 L CNN
+	1    8250 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5CB515F5
+P 8600 5550
+F 0 "R9" H 8670 5596 50  0000 L CNN
+F 1 "R" H 8670 5505 50  0000 L CNN
+F 2 "" V 8530 5550 50  0001 C CNN
+F 3 "~" H 8600 5550 50  0001 C CNN
+	1    8600 5550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J23
+U 1 1 5CB515FB
+P 8950 5550
+F 0 "J23" H 9058 5731 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9058 5640 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8950 5550 50  0001 C CNN
+F 3 "~" H 8950 5550 50  0001 C CNN
+	1    8950 5550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J26
+U 1 1 5CB51601
+P 9150 5550
+F 0 "J26" H 9258 5731 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9258 5640 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9150 5550 50  0001 C CNN
+F 3 "~" H 9150 5550 50  0001 C CNN
+	1    9150 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4250 8150 3900
+Wire Wire Line
+	9850 3900 9850 4300
+$Comp
+L Device:R R7
+U 1 1 5CB5160F
+P 8150 4800
+F 0 "R7" H 8220 4846 50  0000 L CNN
+F 1 "R" H 8220 4755 50  0000 L CNN
+F 2 "" V 8080 4800 50  0001 C CNN
+F 3 "~" H 8150 4800 50  0001 C CNN
+	1    8150 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 5050 8150 5050
+Wire Wire Line
+	8150 5050 8150 4950
+Wire Wire Line
+	9350 5550 9850 5550
+Wire Wire Line
+	9850 5550 9850 5050
+Wire Wire Line
+	9850 5050 9750 5050
+$Comp
+L Connector:Conn_01x01_Male J18
+U 1 1 5CB5161A
+P 8350 5150
+F 0 "J18" H 8458 5331 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 8458 5240 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8350 5150 50  0001 C CNN
+F 3 "~" H 8350 5150 50  0001 C CNN
+	1    8350 5150
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J17
+U 1 1 5CB51620
+P 8350 4950
+F 0 "J17" H 8458 5131 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 8458 5040 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8350 4950 50  0001 C CNN
+F 3 "~" H 8350 4950 50  0001 C CNN
+	1    8350 4950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9300 4700 9450 4700
+$Comp
+L Device:R R10
+U 1 1 5CB51627
+P 8600 5950
+F 0 "R10" H 8670 5996 50  0000 L CNN
+F 1 "R" H 8670 5905 50  0000 L CNN
+F 2 "" V 8530 5950 50  0001 C CNN
+F 3 "~" H 8600 5950 50  0001 C CNN
+	1    8600 5950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP127 Q18
+U 1 1 5CB5162D
+P 8550 4300
+F 0 "Q18" H 8757 4346 50  0000 L CNN
+F 1 "TIP127" H 8757 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 8750 4225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 8550 4300 50  0001 L CNN
+	1    8550 4300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	8050 5550 8050 5350
+Wire Wire Line
+	8050 5350 8350 5350
+Wire Wire Line
+	8250 5850 7800 5850
+Wire Wire Line
+	7850 4450 7800 4450
+Wire Wire Line
+	9050 6250 9050 6150
+$Comp
+L power:VCC #PWR0107
+U 1 1 5CB5163A
+P 9050 3650
+F 0 "#PWR0107" H 9050 3500 50  0001 C CNN
+F 1 "VCC" H 9067 3823 50  0000 C CNN
+F 2 "" H 9050 3650 50  0001 C CNN
+F 3 "" H 9050 3650 50  0001 C CNN
+	1    9050 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 4000 9050 4000
+$Comp
+L Connector:Conn_01x01_Male J25
+U 1 1 5CB51641
+P 9150 3900
+F 0 "J25" H 9258 4081 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9258 3990 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 9150 3900 50  0001 C CNN
+F 3 "~" H 9150 3900 50  0001 C CNN
+	1    9150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J21
+U 1 1 5CB51647
+P 8950 3900
+F 0 "J21" H 9058 4081 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 9058 3990 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 8950 3900 50  0001 C CNN
+F 3 "~" H 8950 3900 50  0001 C CNN
+	1    8950 3900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 4300 9750 4300
+$Comp
+L 00-OTG-Transistor:TIP127 Q25
+U 1 1 5CB5164E
+P 9550 4300
+F 0 "Q25" H 9757 4346 50  0000 L CNN
+F 1 "TIP127" H 9757 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9750 4225 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 9550 4300 50  0001 L CNN
+	1    9550 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8350 4750 8350 4300
+Wire Wire Line
+	8750 3900 8150 3900
+Wire Wire Line
+	9850 3900 9350 3900
+Wire Wire Line
+	9050 3650 9050 4000
+Connection ~ 9050 4000
+Wire Wire Line
+	9050 4000 9450 4000
+$Comp
+L 00-OTG-Transistor:TIP120 Q5
+U 1 1 5CB64091
+P 5650 5850
+F 0 "Q5" H 5891 5896 50  0000 L CNN
+F 1 "TIP120" H 5891 5805 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 5900 5775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5650 5850 50  0001 L CNN
+	1    5650 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP120 Q12
+U 1 1 5CB64097
+P 6650 5850
+F 0 "Q12" H 6891 5896 50  0000 L CNN
+F 1 "TIP120" H 6891 5805 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6900 5775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6650 5850 50  0001 L CNN
+	1    6650 5850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5300 5750 5500
+Wire Wire Line
+	6550 5300 6550 5500
+$Comp
+L 00-OTG-Transistor:TIP120 Q9
+U 1 1 5CB6409F
+P 6050 6750
+F 0 "Q9" H 6291 6796 50  0000 L CNN
+F 1 "TIP120" H 6291 6705 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6300 6675 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6050 6750 50  0001 L CNN
+	1    6050 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J8
+U 1 1 5CB640A5
+P 6200 5500
+F 0 "J8" H 6308 5681 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6308 5590 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6200 5500 50  0001 C CNN
+F 3 "~" H 6200 5500 50  0001 C CNN
+	1    6200 5500
+	1    0    0    -1  
+$EndComp
+Connection ~ 6550 5500
+Wire Wire Line
+	6550 5500 6550 5650
+$Comp
+L Connector:Conn_01x01_Male J6
+U 1 1 5CB640AD
+P 6050 5500
+F 0 "J6" H 6158 5681 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6158 5590 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 5500 50  0001 C CNN
+F 3 "~" H 6050 5500 50  0001 C CNN
+	1    6050 5500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5500 5750 5500
+Connection ~ 5750 5500
+Wire Wire Line
+	5750 5500 5750 5650
+Wire Wire Line
+	6550 6050 6550 6150
+Wire Wire Line
+	6550 6150 6150 6150
+Wire Wire Line
+	5750 6150 5750 6050
+Wire Wire Line
+	6150 6550 6150 6150
+Connection ~ 6150 6150
+Wire Wire Line
+	6150 6150 5750 6150
+Wire Wire Line
+	5750 4900 5750 4800
+Wire Wire Line
+	6550 4800 6550 4900
+$Comp
+L power:GND #PWR0108
+U 1 1 5CB640C4
+P 6150 7050
+F 0 "#PWR0108" H 6150 6800 50  0001 C CNN
+F 1 "GND" H 6155 6877 50  0000 C CNN
+F 2 "" H 6150 7050 50  0001 C CNN
+F 3 "" H 6150 7050 50  0001 C CNN
+	1    6150 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:BC547 Q2
+U 1 1 5CB640CA
+P 5350 6450
+F 0 "Q2" H 5541 6496 50  0000 L CNN
+F 1 "BC547" H 5541 6405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5550 6375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5350 6450 50  0001 L CNN
+	1    5350 6450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5CB640D0
+P 5700 6350
+F 0 "R3" H 5770 6396 50  0000 L CNN
+F 1 "R" H 5770 6305 50  0000 L CNN
+F 2 "" V 5630 6350 50  0001 C CNN
+F 3 "~" H 5700 6350 50  0001 C CNN
+	1    5700 6350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J7
+U 1 1 5CB640D6
+P 6050 6350
+F 0 "J7" H 6158 6531 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6158 6440 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 6350 50  0001 C CNN
+F 3 "~" H 6050 6350 50  0001 C CNN
+	1    6050 6350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J10
+U 1 1 5CB640DC
+P 6250 6350
+F 0 "J10" H 6358 6531 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6358 6440 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6250 6350 50  0001 C CNN
+F 3 "~" H 6250 6350 50  0001 C CNN
+	1    6250 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 00-OTG-Transistor:BC547 Q1
+U 1 1 5CB640E2
+P 5150 5250
+F 0 "Q1" H 5341 5296 50  0000 L CNN
+F 1 "BC547" H 5341 5205 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5350 5175 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5150 5250 50  0001 L CNN
+	1    5150 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5050 5250 4700
+Wire Wire Line
+	6950 4700 6950 5100
+$Comp
+L Device:R R1
+U 1 1 5CB640EA
+P 5250 5600
+F 0 "R1" H 5320 5646 50  0000 L CNN
+F 1 "R" H 5320 5555 50  0000 L CNN
+F 2 "" V 5180 5600 50  0001 C CNN
+F 3 "~" H 5250 5600 50  0001 C CNN
+	1    5250 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 5850 5250 5850
+Wire Wire Line
+	5250 5850 5250 5750
+Wire Wire Line
+	6450 6350 6950 6350
+Wire Wire Line
+	6950 6350 6950 5850
+Wire Wire Line
+	6950 5850 6850 5850
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5CB640F5
+P 5450 5950
+F 0 "J2" H 5558 6131 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5558 6040 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 5450 5950 50  0001 C CNN
+F 3 "~" H 5450 5950 50  0001 C CNN
+	1    5450 5950
+	0    -1   1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J1
+U 1 1 5CB640FB
+P 5450 5750
+F 0 "J1" H 5558 5931 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 5558 5840 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 5450 5750 50  0001 C CNN
+F 3 "~" H 5450 5750 50  0001 C CNN
+	1    5450 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6400 5500 6550 5500
+$Comp
+L Device:R R4
+U 1 1 5CB64102
+P 5700 6750
+F 0 "R4" H 5770 6796 50  0000 L CNN
+F 1 "R" H 5770 6705 50  0000 L CNN
+F 2 "" V 5630 6750 50  0001 C CNN
+F 3 "~" H 5700 6750 50  0001 C CNN
+	1    5700 6750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 00-OTG-Transistor:TIP127 Q4
+U 1 1 5CB64108
+P 5650 5100
+F 0 "Q4" H 5857 5146 50  0000 L CNN
+F 1 "TIP127" H 5857 5055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5850 5025 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 5650 5100 50  0001 L CNN
+	1    5650 5100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5150 6350 5150 6150
+Wire Wire Line
+	5150 6150 5450 6150
+Wire Wire Line
+	6150 7050 6150 6950
+$Comp
+L power:VCC #PWR0109
+U 1 1 5CB64115
+P 6150 4450
+F 0 "#PWR0109" H 6150 4300 50  0001 C CNN
+F 1 "VCC" H 6167 4623 50  0000 C CNN
+F 2 "" H 6150 4450 50  0001 C CNN
+F 3 "" H 6150 4450 50  0001 C CNN
+	1    6150 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4800 6150 4800
+$Comp
+L Connector:Conn_01x01_Male J9
+U 1 1 5CB6411C
+P 6250 4700
+F 0 "J9" H 6358 4881 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6358 4790 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6250 4700 50  0001 C CNN
+F 3 "~" H 6250 4700 50  0001 C CNN
+	1    6250 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J5
+U 1 1 5CB64122
+P 6050 4700
+F 0 "J5" H 6158 4881 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 6158 4790 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x01_P1.00mm_Vertical" H 6050 4700 50  0001 C CNN
+F 3 "~" H 6050 4700 50  0001 C CNN
+	1    6050 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5100 6850 5100
+$Comp
+L 00-OTG-Transistor:TIP127 Q11
+U 1 1 5CB64129
+P 6650 5100
+F 0 "Q11" H 6857 5146 50  0000 L CNN
+F 1 "TIP127" H 6857 5055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6850 5025 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 6650 5100 50  0001 L CNN
+	1    6650 5100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5450 5550 5450 5100
+Wire Wire Line
+	5850 4700 5250 4700
+Wire Wire Line
+	6950 4700 6450 4700
+Wire Wire Line
+	6150 4450 6150 4800
+Connection ~ 6150 4800
+Wire Wire Line
+	6150 4800 6550 4800
+Wire Wire Line
+	3150 1350 3450 1350
+Wire Wire Line
+	3900 1200 3900 1350
+Wire Wire Line
+	3450 1300 3450 1350
+Connection ~ 3450 1350
+Wire Wire Line
+	3450 1350 3900 1350
+Wire Wire Line
+	2350 1300 2350 1350
+Wire Wire Line
+	2350 1350 2550 1350
+Wire Wire Line
+	3450 1000 2850 1000
+Wire Wire Line
+	2850 1050 2850 1000
+Connection ~ 2850 1000
+Wire Wire Line
+	2850 1000 2350 1000
+Wire Wire Line
+	2350 1350 800  1350
+Wire Wire Line
+	800  1350 800  2300
+Wire Wire Line
+	800  2300 1050 2300
+Connection ~ 2350 1350
+$Comp
+L 00-OTG-Transistor:BC547 Q15
+U 1 1 5CB51607
+P 8050 4450
+F 0 "Q15" H 8241 4496 50  0000 L CNN
+F 1 "BC547" H 8241 4405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8250 4375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8050 4450 50  0001 L CNN
+	1    8050 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 5850 7800 5300
+Wire Wire Line
+	7800 4450 7800 4650
+Wire Wire Line
+	4900 6650 4900 6100
+Wire Wire Line
+	5350 6650 4900 6650
+Wire Wire Line
+	4950 5250 4900 5250
+Wire Wire Line
+	4900 5250 4900 5400
+$Comp
+L 4xxx:4049 U3
+U 2 1 5CB515E3
+P 7800 5000
+F 0 "U3" H 7800 5317 50  0000 C CNN
+F 1 "4049" H 7800 5226 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 7800 5000 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 7800 5000 50  0001 C CNN
+	2    7800 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L 4xxx:4049 U3
+U 4 1 5CB310F7
+P 8200 2150
+F 0 "U3" H 8200 2467 50  0000 C CNN
+F 1 "4049" H 8200 2376 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 8200 2150 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 8200 2150 50  0001 C CNN
+	4    8200 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L 4xxx:4049 U3
+U 5 1 5CAEA1C3
+P 5250 2350
+F 0 "U3" H 5250 2667 50  0000 C CNN
+F 1 "4049" H 5250 2576 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5250 2350 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 5250 2350 50  0001 C CNN
+	5    5250 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L 4xxx:4049 U3
+U 1 1 5CB640BE
+P 4900 5800
+F 0 "U3" H 4900 6117 50  0000 C CNN
+F 1 "4049" H 4900 6026 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 4900 5800 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 4900 5800 50  0001 C CNN
+	1    4900 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5CAEA1C9
+P 6500 3600
+F 0 "#PWR0110" H 6500 3350 50  0001 C CNN
+F 1 "GND" H 6505 3427 50  0000 C CNN
+F 2 "" H 6500 3600 50  0001 C CNN
+F 3 "" H 6500 3600 50  0001 C CNN
+	1    6500 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2200 4300 2200
+Wire Wire Line
+	4300 2200 4300 1900
+Wire Wire Line
+	4300 1900 5250 1900
+Connection ~ 5250 1900
+Wire Wire Line
+	5250 1900 5250 2050
+Wire Wire Line
+	3250 2400 4700 2400
+Wire Wire Line
+	4700 2400 4700 3850
+Wire Wire Line
+	4700 3850 7750 3850
+Wire Wire Line
+	7750 3850 7750 1750
+Wire Wire Line
+	7750 1750 8200 1750
+Connection ~ 8200 1750
+Wire Wire Line
+	8200 1750 8200 1850
+Wire Wire Line
+	3250 4400 5300 4400
+Wire Wire Line
+	5300 4400 5300 4100
+Wire Wire Line
+	5300 4100 7450 4100
+Wire Wire Line
+	7450 4100 7450 4650
+Wire Wire Line
+	7450 4650 7800 4650
+Connection ~ 7800 4650
+Wire Wire Line
+	7800 4650 7800 4700
+Wire Wire Line
+	3250 4500 4550 4500
+Wire Wire Line
+	4550 4500 4550 5400
+Wire Wire Line
+	4550 5400 4900 5400
+Connection ~ 4900 5400
+Wire Wire Line
+	4900 5400 4900 5500
+Wire Wire Line
+	5900 3300 3850 3300
+Wire Wire Line
+	3850 3300 3850 3950
+Wire Wire Line
+	3850 3950 3250 3950
+Wire Wire Line
+	8850 3100 7900 3100
+Wire Wire Line
+	7900 3100 7900 4000
+Wire Wire Line
+	7900 4000 4000 4000
+Wire Wire Line
+	4000 4000 4000 2750
+Wire Wire Line
+	4000 2750 3250 2750
+Wire Wire Line
+	8450 5950 7050 5950
+Wire Wire Line
+	7050 5950 7050 4050
+Wire Wire Line
+	7050 4050 3250 4050
+Wire Wire Line
+	5550 6750 4200 6750
+Wire Wire Line
+	4200 6750 4200 4150
+Wire Wire Line
+	4200 4150 3250 4150
+$Comp
+L power:GND #PWR0111
+U 1 1 5CD33953
+P 2850 650
+F 0 "#PWR0111" H 2850 400 50  0001 C CNN
+F 1 "GND" H 2855 477 50  0000 C CNN
+F 2 "" H 2850 650 50  0001 C CNN
+F 3 "" H 2850 650 50  0001 C CNN
+	1    2850 650 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2850 650  2850 1000
 $EndSCHEMATC
