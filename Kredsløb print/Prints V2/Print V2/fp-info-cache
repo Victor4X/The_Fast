@@ -1,4 +1,4 @@
-15916641989603410
+15918196441343189
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -42118,6 +42118,13 @@ C Rect series Radial pin pitch 2.50mm 5.00mm  length 7mm width 3.5mm Capacitor
 0
 2
 2
+Custom footprints
+Power_wire_pad
+C, Rect series, Radial, pin pitch=2.50mm 5.00mm, , length*width=7*3.5mm^2, Capacitor
+C Rect series Radial pin pitch 2.50mm 5.00mm  length 7mm width 3.5mm Capacitor
+0
+1
+1
 Diode_SMD
 Diode_Bridge_Diotec_ABS
 SMD diode bridge ABS (Diotec), see https://diotec.com/tl_files/diotec/files/pdf/datasheets/abs2.pdf

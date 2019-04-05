@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 00-OTG-Microcontroler:esp32 U1
+L 00-OTG-Microcontroler:esp32 U2
 U 1 1 5C9DC679
 P 2150 3600
-F 0 "U1" H 2150 5347 60  0000 C CNN
+F 0 "U2" H 2150 5347 60  0000 C CNN
 F 1 "esp32" H 2150 5241 60  0000 C CNN
 F 2 "footprints otg:ESP32_mcu" H 2150 3600 60  0001 C CNN
 F 3 "" H 2150 3600 60  0001 C CNN
@@ -261,48 +261,48 @@ Wire Wire Line
 Wire Wire Line
 	5250 1800 5250 1900
 $Comp
-L Regulator_Linear:LM7805_TO220 U2
+L Regulator_Linear:LM7805_TO220 U1
 U 1 1 5CA3A1F0
-P 2850 1350
-F 0 "U2" H 2850 1592 50  0000 C CNN
-F 1 "LM7805_TO220" H 2850 1501 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2850 1575 50  0001 C CIN
-F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 2850 1300 50  0001 C CNN
-	1    2850 1350
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C C2
-U 1 1 5CA3E782
-P 3450 1150
-F 0 "C2" H 3565 1196 50  0000 L CNN
-F 1 "C" H 3565 1105 50  0000 L CNN
-F 2 "footprints otg:C_5.00mm" H 3488 1000 50  0001 C CNN
-F 3 "~" H 3450 1150 50  0001 C CNN
-	1    3450 1150
-	-1   0    0    1   
+P 1850 700
+F 0 "U1" H 1850 942 50  0000 C CNN
+F 1 "LM7805_TO220" H 1850 851 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 1850 925 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 1850 650 50  0001 C CNN
+	1    1850 700 
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C1
+U 1 1 5CA3E782
+P 1250 900
+F 0 "C1" H 1365 946 50  0000 L CNN
+F 1 "C" H 1365 855 50  0000 L CNN
+F 2 "Custom footprints:C_6.00mm" H 1288 750 50  0001 C CNN
+F 3 "~" H 1250 900 50  0001 C CNN
+	1    1250 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
 U 1 1 5CA3FF12
-P 2350 1150
-F 0 "C1" H 2465 1196 50  0000 L CNN
-F 1 "C" H 2465 1105 50  0000 L CNN
-F 2 "footprints otg:C_5.00mm" H 2388 1000 50  0001 C CNN
-F 3 "~" H 2350 1150 50  0001 C CNN
-	1    2350 1150
-	-1   0    0    1   
+P 2350 900
+F 0 "C2" H 2465 946 50  0000 L CNN
+F 1 "C" H 2465 855 50  0000 L CNN
+F 2 "Custom footprints:C_6.00mm" H 2388 750 50  0001 C CNN
+F 3 "~" H 2350 900 50  0001 C CNN
+	1    2350 900 
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR0102
 U 1 1 5CA41279
-P 3900 1200
-F 0 "#PWR0102" H 3900 1050 50  0001 C CNN
-F 1 "VCC" H 3917 1373 50  0000 C CNN
-F 2 "" H 3900 1200 50  0001 C CNN
-F 3 "" H 3900 1200 50  0001 C CNN
-	1    3900 1200
-	1    0    0    -1  
+P 800 850
+F 0 "#PWR0102" H 800 700 50  0001 C CNN
+F 1 "VCC" H 817 1023 50  0000 C CNN
+F 2 "" H 800 850 50  0001 C CNN
+F 3 "" H 800 850 50  0001 C CNN
+	1    800  850 
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:VCC #PWR0103
@@ -1217,32 +1217,25 @@ Connection ~ 6150 4800
 Wire Wire Line
 	6150 4800 6550 4800
 Wire Wire Line
-	3150 1350 3450 1350
+	1550 700  1250 700 
 Wire Wire Line
-	3900 1200 3900 1350
+	800  850  800  700 
 Wire Wire Line
-	3450 1300 3450 1350
-Connection ~ 3450 1350
+	1250 750  1250 700 
+Connection ~ 1250 700 
 Wire Wire Line
-	3450 1350 3900 1350
+	1250 700  800  700 
 Wire Wire Line
-	2350 1300 2350 1350
+	2350 750  2350 700 
 Wire Wire Line
-	2350 1350 2550 1350
+	2350 700  2150 700 
 Wire Wire Line
-	3450 1000 2850 1000
+	1250 1050 1850 1050
 Wire Wire Line
-	2850 1050 2850 1000
-Connection ~ 2850 1000
+	1850 1000 1850 1050
+Connection ~ 1850 1050
 Wire Wire Line
-	2850 1000 2350 1000
-Wire Wire Line
-	2350 1350 800  1350
-Wire Wire Line
-	800  1350 800  2300
-Wire Wire Line
-	800  2300 1050 2300
-Connection ~ 2350 1350
+	1850 1050 2350 1050
 $Comp
 L 00-OTG-Transistor:BC547 Q15
 U 1 1 5CB51607
@@ -1322,18 +1315,10 @@ F 3 "" H 6500 3600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 2200 4300 2200
-Wire Wire Line
-	4300 2200 4300 1900
-Wire Wire Line
 	4300 1900 5250 1900
 Connection ~ 5250 1900
 Wire Wire Line
 	5250 1900 5250 2050
-Wire Wire Line
-	3250 2400 4700 2400
-Wire Wire Line
-	4700 2400 4700 3850
 Wire Wire Line
 	4700 3850 7750 3850
 Wire Wire Line
@@ -1393,17 +1378,80 @@ Wire Wire Line
 	4200 6750 4200 4150
 Wire Wire Line
 	4200 4150 3250 4150
+Wire Wire Line
+	2350 700  2800 700 
+Wire Wire Line
+	2800 700  2800 1750
+Wire Wire Line
+	2800 1750 950  1750
+Wire Wire Line
+	950  1750 950  2300
+Connection ~ 2350 700 
+Wire Wire Line
+	950  2300 1050 2300
+Wire Wire Line
+	3250 2400 4300 2400
+Wire Wire Line
+	3250 2200 4700 2200
+Wire Wire Line
+	4300 1900 4300 2400
+Wire Wire Line
+	4700 2200 4700 3850
+Wire Wire Line
+	1850 1400 1850 1050
 $Comp
 L power:GND #PWR0111
 U 1 1 5CD33953
-P 2850 650
-F 0 "#PWR0111" H 2850 400 50  0001 C CNN
-F 1 "GND" H 2855 477 50  0000 C CNN
-F 2 "" H 2850 650 50  0001 C CNN
-F 3 "" H 2850 650 50  0001 C CNN
-	1    2850 650 
+P 1850 1400
+F 0 "#PWR0111" H 1850 1150 50  0001 C CNN
+F 1 "GND" H 1855 1227 50  0000 C CNN
+F 2 "" H 1850 1400 50  0001 C CNN
+F 3 "" H 1850 1400 50  0001 C CNN
+	1    1850 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5CBA879B
+P 3050 1600
+F 0 "#PWR0112" H 3050 1350 50  0001 C CNN
+F 1 "GND" H 3055 1427 50  0000 C CNN
+F 2 "" H 3050 1600 50  0001 C CNN
+F 3 "" H 3050 1600 50  0001 C CNN
+	1    3050 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0113
+U 1 1 5CBB36DA
+P 3300 1600
+F 0 "#PWR0113" H 3300 1450 50  0001 C CNN
+F 1 "VCC" H 3317 1773 50  0000 C CNN
+F 2 "" H 3300 1600 50  0001 C CNN
+F 3 "" H 3300 1600 50  0001 C CNN
+	1    3300 1600
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2850 650  2850 1000
+$Comp
+L Connector_Generic:Conn_01x01 J33
+U 1 1 5CBC9865
+P 3050 1300
+F 0 "J33" V 3014 1212 50  0000 R CNN
+F 1 "Conn_01x01" V 2923 1212 50  0000 R CNN
+F 2 "Custom footprints:Power_wire_pad" H 3050 1300 50  0001 C CNN
+F 3 "~" H 3050 1300 50  0001 C CNN
+	1    3050 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J34
+U 1 1 5CBCB57E
+P 3300 1300
+F 0 "J34" V 3264 1212 50  0000 R CNN
+F 1 "Conn_01x01" V 3173 1212 50  0000 R CNN
+F 2 "Custom footprints:Power_wire_pad" H 3300 1300 50  0001 C CNN
+F 3 "~" H 3300 1300 50  0001 C CNN
+	1    3300 1300
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
