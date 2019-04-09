@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:print v1-cache
+LIBS:Print V2-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L 00-OTG-Microcontroler:esp32 U2
+L Print-V2-rescue:esp32-00-OTG-Microcontroler U2
 U 1 1 5C9DC679
 P 2150 3600
 F 0 "U2" H 2150 5347 60  0000 C CNN
@@ -39,7 +39,7 @@ $EndComp
 Wire Wire Line
 	700  4800 1050 4800
 $Comp
-L 00-OTG-Transistor:TIP120 Q8
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q8
 U 1 1 5CAEA18F
 P 6000 2400
 F 0 "Q8" H 6241 2446 50  0000 L CNN
@@ -50,7 +50,7 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 6000 2400 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP120 Q14
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q14
 U 1 1 5CAEA195
 P 7000 2400
 F 0 "Q14" H 7241 2446 50  0000 L CNN
@@ -65,7 +65,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 1850 6900 2050
 $Comp
-L 00-OTG-Transistor:TIP120 Q10
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q10
 U 1 1 5CAEA1A3
 P 6400 3300
 F 0 "Q10" H 6641 3346 50  0000 L CNN
@@ -121,7 +121,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 1350 6900 1450
 $Comp
-L 00-OTG-Transistor:BC547 Q6
+L Print-V2-rescue:BC547-00-OTG-Transistor Q6
 U 1 1 5CAEA1CF
 P 5700 3000
 F 0 "Q6" H 5891 3046 50  0000 L CNN
@@ -165,7 +165,7 @@ F 3 "~" H 6600 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:BC547 Q3
+L Print-V2-rescue:BC547-00-OTG-Transistor Q3
 U 1 1 5CAEA1E7
 P 5500 1800
 F 0 "Q3" H 5691 1846 50  0000 L CNN
@@ -236,7 +236,7 @@ F 3 "~" H 6050 3300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP127 Q7
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q7
 U 1 1 5CAEA20F
 P 6000 1650
 F 0 "Q7" H 6207 1696 50  0000 L CNN
@@ -342,7 +342,7 @@ $EndComp
 Wire Wire Line
 	7300 1650 7200 1650
 $Comp
-L 00-OTG-Transistor:TIP127 Q13
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q13
 U 1 1 5CAEA19B
 P 7000 1650
 F 0 "Q13" H 7207 1696 50  0000 L CNN
@@ -364,7 +364,7 @@ Connection ~ 6500 1350
 Wire Wire Line
 	6500 1350 6900 1350
 $Comp
-L 00-OTG-Transistor:TIP120 Q22
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q22
 U 1 1 5CB310CA
 P 8950 2200
 F 0 "Q22" H 9191 2246 50  0000 L CNN
@@ -375,7 +375,7 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8950 2200 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP120 Q28
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q28
 U 1 1 5CB310D0
 P 9950 2200
 F 0 "Q28" H 10191 2246 50  0000 L CNN
@@ -390,7 +390,7 @@ Wire Wire Line
 Wire Wire Line
 	9850 1650 9850 1850
 $Comp
-L 00-OTG-Transistor:TIP120 Q24
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q24
 U 1 1 5CB310D8
 P 9350 3100
 F 0 "Q24" H 9591 3146 50  0000 L CNN
@@ -457,7 +457,7 @@ F 3 "" H 9450 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:BC547 Q20
+L Print-V2-rescue:BC547-00-OTG-Transistor Q20
 U 1 1 5CB31103
 P 8650 2800
 F 0 "Q20" H 8841 2846 50  0000 L CNN
@@ -501,7 +501,7 @@ F 3 "~" H 9550 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:BC547 Q17
+L Print-V2-rescue:BC547-00-OTG-Transistor Q17
 U 1 1 5CB3111B
 P 8450 1600
 F 0 "Q17" H 8641 1646 50  0000 L CNN
@@ -572,7 +572,7 @@ F 3 "~" H 9000 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP127 Q21
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q21
 U 1 1 5CB31141
 P 8950 1450
 F 0 "Q21" H 9157 1496 50  0000 L CNN
@@ -634,7 +634,7 @@ $EndComp
 Wire Wire Line
 	10250 1450 10150 1450
 $Comp
-L 00-OTG-Transistor:TIP127 Q27
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q27
 U 1 1 5CB31162
 P 9950 1450
 F 0 "Q27" H 10157 1496 50  0000 L CNN
@@ -656,7 +656,7 @@ Connection ~ 9450 1150
 Wire Wire Line
 	9450 1150 9850 1150
 $Comp
-L 00-OTG-Transistor:TIP120 Q19
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q19
 U 1 1 5CB515B6
 P 8550 5050
 F 0 "Q19" H 8791 5096 50  0000 L CNN
@@ -667,7 +667,7 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 8550 5050 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP120 Q26
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q26
 U 1 1 5CB515BC
 P 9550 5050
 F 0 "Q26" H 9791 5096 50  0000 L CNN
@@ -682,7 +682,7 @@ Wire Wire Line
 Wire Wire Line
 	9450 4500 9450 4700
 $Comp
-L 00-OTG-Transistor:TIP120 Q23
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q23
 U 1 1 5CB515C4
 P 8950 5950
 F 0 "Q23" H 9191 5996 50  0000 L CNN
@@ -749,7 +749,7 @@ F 3 "" H 9050 6250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:BC547 Q16
+L Print-V2-rescue:BC547-00-OTG-Transistor Q16
 U 1 1 5CB515EF
 P 8250 5650
 F 0 "Q16" H 8441 5696 50  0000 L CNN
@@ -853,7 +853,7 @@ F 3 "~" H 8600 5950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP127 Q18
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q18
 U 1 1 5CB5162D
 P 8550 4300
 F 0 "Q18" H 8757 4346 50  0000 L CNN
@@ -911,7 +911,7 @@ $EndComp
 Wire Wire Line
 	9850 4300 9750 4300
 $Comp
-L 00-OTG-Transistor:TIP127 Q25
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q25
 U 1 1 5CB5164E
 P 9550 4300
 F 0 "Q25" H 9757 4346 50  0000 L CNN
@@ -933,7 +933,7 @@ Connection ~ 9050 4000
 Wire Wire Line
 	9050 4000 9450 4000
 $Comp
-L 00-OTG-Transistor:TIP120 Q5
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q5
 U 1 1 5CB64091
 P 5650 5850
 F 0 "Q5" H 5891 5896 50  0000 L CNN
@@ -944,7 +944,7 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5650 5850 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP120 Q12
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q12
 U 1 1 5CB64097
 P 6650 5850
 F 0 "Q12" H 6891 5896 50  0000 L CNN
@@ -959,7 +959,7 @@ Wire Wire Line
 Wire Wire Line
 	6550 5300 6550 5500
 $Comp
-L 00-OTG-Transistor:TIP120 Q9
+L Print-V2-rescue:TIP120-00-OTG-Transistor Q9
 U 1 1 5CB6409F
 P 6050 6750
 F 0 "Q9" H 6291 6796 50  0000 L CNN
@@ -1026,7 +1026,7 @@ F 3 "" H 6150 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:BC547 Q2
+L Print-V2-rescue:BC547-00-OTG-Transistor Q2
 U 1 1 5CB640CA
 P 5350 6450
 F 0 "Q2" H 5541 6496 50  0000 L CNN
@@ -1070,7 +1070,7 @@ F 3 "~" H 6250 6350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 00-OTG-Transistor:BC547 Q1
+L Print-V2-rescue:BC547-00-OTG-Transistor Q1
 U 1 1 5CB640E2
 P 5150 5250
 F 0 "Q1" H 5341 5296 50  0000 L CNN
@@ -1141,7 +1141,7 @@ F 3 "~" H 5700 6750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 00-OTG-Transistor:TIP127 Q4
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q4
 U 1 1 5CB64108
 P 5650 5100
 F 0 "Q4" H 5857 5146 50  0000 L CNN
@@ -1195,7 +1195,7 @@ $EndComp
 Wire Wire Line
 	6950 5100 6850 5100
 $Comp
-L 00-OTG-Transistor:TIP127 Q11
+L Print-V2-rescue:TIP127-00-OTG-Transistor Q11
 U 1 1 5CB64129
 P 6650 5100
 F 0 "Q11" H 6857 5146 50  0000 L CNN
@@ -1237,7 +1237,7 @@ Connection ~ 1850 1050
 Wire Wire Line
 	1850 1050 2350 1050
 $Comp
-L 00-OTG-Transistor:BC547 Q15
+L Print-V2-rescue:BC547-00-OTG-Transistor Q15
 U 1 1 5CB51607
 P 8050 4450
 F 0 "Q15" H 8241 4496 50  0000 L CNN
@@ -1385,20 +1385,12 @@ Wire Wire Line
 Wire Wire Line
 	2800 1750 950  1750
 Wire Wire Line
-	950  1750 950  2300
+	950  1750 950  1950
 Connection ~ 2350 700 
 Wire Wire Line
 	950  2300 1050 2300
 Wire Wire Line
-	3250 2400 4300 2400
-Wire Wire Line
-	3250 2200 4700 2200
-Wire Wire Line
-	4300 1900 4300 2400
-Wire Wire Line
-	4700 2200 4700 3850
-Wire Wire Line
-	1850 1400 1850 1050
+	1850 1400 1850 1250
 $Comp
 L power:GND #PWR0111
 U 1 1 5CD33953
@@ -1458,4 +1450,37 @@ Wire Wire Line
 	3050 1600 3050 1500
 Wire Wire Line
 	3300 1600 3300 1500
+Wire Wire Line
+	4300 1900 4300 2200
+Wire Wire Line
+	4300 2200 3250 2200
+Wire Wire Line
+	3250 2400 4700 2400
+Wire Wire Line
+	4700 2400 4700 3850
+Wire Wire Line
+	1650 1450 1650 1250
+Wire Wire Line
+	1650 1250 1850 1250
+Connection ~ 1850 1250
+Wire Wire Line
+	1850 1250 1850 1050
+Wire Wire Line
+	650  1450 650  1950
+Wire Wire Line
+	650  1950 950  1950
+Connection ~ 950  1950
+Wire Wire Line
+	950  1950 950  2300
+$Comp
+L 4xxx:4049 U?
+U 7 1 5CB3F75A
+P 1150 1450
+F 0 "U?" H 1150 1767 50  0000 C CNN
+F 1 "4049" H 1150 1676 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 1150 1450 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 1150 1450 50  0001 C CNN
+	7    1150 1450
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC

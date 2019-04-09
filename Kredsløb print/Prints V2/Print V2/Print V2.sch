@@ -1385,12 +1385,12 @@ Wire Wire Line
 Wire Wire Line
 	2800 1750 950  1750
 Wire Wire Line
-	950  1750 950  2300
+	950  1750 950  1950
 Connection ~ 2350 700 
 Wire Wire Line
 	950  2300 1050 2300
 Wire Wire Line
-	1850 1400 1850 1050
+	1850 1400 1850 1250
 $Comp
 L power:GND #PWR0111
 U 1 1 5CD33953
@@ -1458,4 +1458,29 @@ Wire Wire Line
 	3250 2400 4700 2400
 Wire Wire Line
 	4700 2400 4700 3850
+Wire Wire Line
+	1650 1450 1650 1250
+Wire Wire Line
+	1650 1250 1850 1250
+Connection ~ 1850 1250
+Wire Wire Line
+	1850 1250 1850 1050
+Wire Wire Line
+	650  1450 650  1950
+Wire Wire Line
+	650  1950 950  1950
+Connection ~ 950  1950
+Wire Wire Line
+	950  1950 950  2300
+$Comp
+L 4xxx:4049 U3
+U 7 1 5CB3F75A
+P 1150 1450
+F 0 "U3" H 1150 1767 50  0000 C CNN
+F 1 "4049" H 1150 1676 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 1150 1450 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 1150 1450 50  0001 C CNN
+	7    1150 1450
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
