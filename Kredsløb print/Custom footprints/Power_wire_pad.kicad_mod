@@ -1,10 +1,10 @@
-(module "Custom footprints:C_6.00mm" (layer F.Cu) (tedit 5CA70CCF)
+(module Power_wire_pad (layer F.Cu) (tedit 5CADB3BD)
   (descr "C, Rect series, Radial, pin pitch=2.50mm 5.00mm, , length*width=7*3.5mm^2, Capacitor")
   (tags "C Rect series Radial pin pitch 2.50mm 5.00mm  length 7mm width 3.5mm Capacitor")
   (fp_text reference C1 (at 2.54 -2.794) (layer F.SilkS) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (fp_text value C (at 2.54 2.794) (layer F.Fab)
+  (fp_text value C (at 2.54 2.794) (layer F.Fab) hide
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_line (start -2.27 -1.75) (end -2.27 1.75) (layer F.Fab) (width 0.1))
@@ -23,9 +23,4 @@
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (pad 1 smd roundrect (at 0 0) (size 3.5 3) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25))
-  (model ${KISYS3DMOD}/Capacitor_THT.3dshapes/C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm.wrl
-    (at (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
-  )
 )
