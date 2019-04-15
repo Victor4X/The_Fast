@@ -72,11 +72,10 @@ int pos1 = 0;
 int pos2 = 0;
 
 void setup() {
-  Serial.begin(115200);
+  //Serial.begin(9600);
 
   // Pin stuffs -UPDATE TO DIRECTION
   pinMode(1, OUTPUT);
-  pinMode(5, OUTPUT);
   pinMode(Direction2Pin, OUTPUT);
   pinMode(Direction3Pin, OUTPUT);
   pinMode(Direction4Pin, OUTPUT);

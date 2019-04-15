@@ -47,7 +47,10 @@ const int PWM4Freq = 1000;
 const int PWM4Channel = 3;
 const int PWM4Resolution = 8;
 
-
+int dutyCycle1 = 0; // 0%
+int dutyCycle2 = 0; // 0%
+int dutyCycle3 = 0; // 0%
+int dutyCycle4 = 0; // 0%
 
 // Load Wi-Fi library
 #include <WiFi.h>
@@ -72,7 +75,8 @@ int pos1 = 0;
 int pos2 = 0;
 
 void setup() {
-  Serial.begin(115200);
+  //Serial.begin(115200);  
+    //REMEMBER TO COMMENT OUT BEFORE UPLOADING - FOR SOME REASON - WHAT THE FUCK
 
   // Pin stuffs -UPDATE TO DIRECTION
   pinMode(1, OUTPUT);
@@ -99,10 +103,10 @@ void setup() {
   ledcAttachPin(PWM3Pin, PWM3Channel);
   ledcAttachPin(PWM4Pin, PWM4Channel);
 
-  int dutyCycle1 = 128; // 0%
-  int dutyCycle2 = 0; // 0%
-  int dutyCycle3 = 0; // 0%
-  int dutyCycle4 = 0; // 0%
+  dutyCycle1 = 0; // 0%
+  dutyCycle2 = 0; // 0%
+  dutyCycle3 = 0; // 0%
+  dutyCycle4 = 0; // 0%
 
   ledcWrite(PWM1Channel, dutyCycle1);
   ledcWrite(PWM2Channel, dutyCycle2);
@@ -383,8 +387,8 @@ void loop(){
     // Turn on pins
     if (bForward == true){
       Serial.println("Pin 19 HIGH");
-      dutyCycle1 = 128; // 50%
-      dutyCycle3 = 128; // 50%
+      dutyCycle1 = 256; // 50%
+      dutyCycle3 = 256; // 50%
       //digitalWrite(forwardPin, HIGH);
     }
     if (bBackward == true){
