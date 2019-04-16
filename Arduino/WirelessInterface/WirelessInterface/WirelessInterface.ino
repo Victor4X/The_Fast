@@ -31,19 +31,19 @@ const int PWM3Pin = 18;  // Wheel 3 PWM
 const int PWM4Pin = 19;  // Wheel 4 PWM
 
 // setting PWM properties
-const int PWM1Freq = 1000; // VAR TIDLIGERE 5000
+const int PWM1Freq = 600; // VAR TIDLIGERE 5000
 const int PWM1Channel = 0;
 const int PWM1Resolution = 8;
 
-const int PWM2Freq = 1000;
+const int PWM2Freq = 600;
 const int PWM2Channel = 1;
 const int PWM2Resolution = 8;
 
-const int PWM3Freq = 1000;
+const int PWM3Freq = 600;
 const int PWM3Channel = 2;
 const int PWM3Resolution = 8;
 
-const int PWM4Freq = 1000;
+const int PWM4Freq = 600;
 const int PWM4Channel = 3;
 const int PWM4Resolution = 8;
 
@@ -79,13 +79,12 @@ void setup() {
     //REMEMBER TO COMMENT OUT BEFORE UPLOADING - FOR SOME REASON - WHAT THE FUCK
 
   // Pin stuffs -UPDATE TO DIRECTION
-  pinMode(1, OUTPUT);
-  pinMode(5, OUTPUT);
+  pinMode(Direction1Pin, OUTPUT);
   pinMode(Direction2Pin, OUTPUT);
   pinMode(Direction3Pin, OUTPUT);
   pinMode(Direction4Pin, OUTPUT);
 
-  digitalWrite(1, LOW);
+  digitalWrite(Direction1Pin, LOW);
   digitalWrite(Direction2Pin, LOW);
   digitalWrite(Direction3Pin, LOW);
   digitalWrite(Direction4Pin, LOW);
@@ -163,31 +162,48 @@ void loop(){
               Serial.println("Forward");
               bForward = true;
               bBackward = false;
+              bRotateCCW = false;
+              bRotateCW = false;
 
             }else if (header.indexOf("GET /left") >= 0) {
               Serial.println("Left");
               bLeft = true;
               bRight = false;
+              bRotateCCW = false;
+              bRotateCW = false;
                   
             }else if (header.indexOf("GET /right") >= 0) {
               Serial.println("Right");
               bRight = true;
               bLeft = false;
+              bRotateCCW = false;
+              bRotateCW = false;
                  
             }else if (header.indexOf("GET /backward") >= 0) {
               Serial.println("Backward");
               bBackward = true;
               bForward = false;
+              bRotateCCW = false;
+              bRotateCW = false;
 
             }else if (header.indexOf("GET /rotateccw") >= 0) {
               Serial.println("Rotate CCW");
               bRotateCCW = true;
-              
+              bBackward = false;
+              bForward = false;
+              bLeft = false;
+              bRight = false;
+              bRotateCW = false;
 
             }else if (header.indexOf("GET /rotatecw") >= 0) {
               Serial.println("Rotate CW");
               bRotateCW = true;
-                       
+              bBackward = false;
+              bForward = false;
+              bLeft = false;
+              bRight = false;
+              bRotateCCW = false;
+              
             }else if (header.indexOf("GET /stopforward") >= 0) {
               Serial.println("stopForward");
               bForward = false;
@@ -371,30 +387,57 @@ void loop(){
     movementChange = false;
 
     // Turn off pins
-    if (bForward == false){
-      Serial.println("Pin 19 LOW");
-      dutyCycle1 = 0; // 0%
-      dutyCycle3 = 0; // 0%
-      //digitalWrite(forwardPin, LOW);
-    }
-    if (bBackward == false){
-      Serial.println("Pin 18 LOW");
-      //digitalWrite(backwardPin, LOW);
-    }
-
-    delay(400);
+    dutyCycle1 = 0;
+    dutyCycle2 = 0;
+    dutyCycle3 = 0;
+    dutyCycle4 = 0;
   
     // Turn on pins
     if (bForward == true){
-      Serial.println("Pin 19 HIGH");
-      dutyCycle1 = 256; // 50%
-      dutyCycle3 = 256; // 50%
-      //digitalWrite(forwardPin, HIGH);
+      digitalWrite(Direction1Pin, LOW);
+      dutyCycle1 = 224; // 87.5%
+      digitalWrite(Direction3Pin, HIGH);
+      dutyCycle3 = 224; // 87.5%
     }
     if (bBackward == true){
-      Serial.println("Pin 18 HIGH");
-      //digitalWrite(backwardPin, HIGH);
+      digitalWrite(Direction1Pin, HIGH);
+      dutyCycle1 = 224; // 87.5%
+      digitalWrite(Direction3Pin, LOW);
+      dutyCycle3 = 224; // 87.5%
     }
+    if (bLeft == true){
+      digitalWrite(Direction2Pin, LOW);
+      dutyCycle2 = 224; // 87.5%
+      digitalWrite(Direction4Pin, HIGH);
+      dutyCycle4 = 224; // 87.5%
+    }
+    if (bRight == true){
+      digitalWrite(Direction2Pin, HIGH);
+      dutyCycle2 = 224; // 87.5%
+      digitalWrite(Direction4Pin, LOW);
+      dutyCycle4 = 224; // 87.5%
+    }
+    if (bRotateCCW == true){
+      digitalWrite(Direction1Pin, LOW);
+      dutyCycle1 = 160; // ?
+      digitalWrite(Direction2Pin, LOW);
+      dutyCycle2 = 160; // ?
+      digitalWrite(Direction3Pin, LOW);
+      dutyCycle3 = 160; // ?
+      digitalWrite(Direction4Pin, LOW);
+      dutyCycle4 = 160; // ?
+    }
+    if (bRotateCW == true){
+      digitalWrite(Direction1Pin, HIGH);
+      dutyCycle1 = 160; // ?
+      digitalWrite(Direction2Pin, HIGH);
+      dutyCycle2 = 160; // ?
+      digitalWrite(Direction3Pin, HIGH);
+      dutyCycle3 = 160; // ?
+      digitalWrite(Direction4Pin, HIGH);
+      dutyCycle4 = 160; // ?
+    }
+    
     Serial.println(String(dutyCycle1)+" "+String(dutyCycle2)+" "+String(dutyCycle3)+" "+String(dutyCycle4));
     ledcWrite(PWM1Channel, dutyCycle1);
     ledcWrite(PWM2Channel, dutyCycle2);
