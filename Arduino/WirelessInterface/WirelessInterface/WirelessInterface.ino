@@ -9,8 +9,10 @@ Inspiration from:
   // Movement
 bool movementChange = false;
 
-const int forwardPin = 19;
-const int backwardPin = 18;
+const int Direction1Pin = 1;
+const int Direction2Pin = 3;
+const int Direction3Pin = 23;
+const int Direction4Pin = 22;
 
 // Movement variables
 bool bForward = false;
@@ -21,18 +23,45 @@ bool bRight = false;
 bool bRotateCCW = false;
 bool bRotateCW = false;
 
+// PWM STUFFS ARGH
+// the number of the output pin
+const int PWM1Pin = 5;  // Wheel 1 PWM
+const int PWM2Pin = 17;  // Wheel 2 PWM
+const int PWM3Pin = 18;  // Wheel 3 PWM
+const int PWM4Pin = 19;  // Wheel 4 PWM
 
+// setting PWM properties
+const int PWM1Freq = 600; // VAR TIDLIGERE 5000
+const int PWM1Channel = 0;
+const int PWM1Resolution = 8;
+
+const int PWM2Freq = 600;
+const int PWM2Channel = 1;
+const int PWM2Resolution = 8;
+
+const int PWM3Freq = 600;
+const int PWM3Channel = 2;
+const int PWM3Resolution = 8;
+
+const int PWM4Freq = 600;
+const int PWM4Channel = 3;
+const int PWM4Resolution = 8;
+
+int dutyCycle1 = 0; // 0%
+int dutyCycle2 = 0; // 0%
+int dutyCycle3 = 0; // 0%
+int dutyCycle4 = 0; // 0%
 
 // Load Wi-Fi library
 #include <WiFi.h>
 
 // Replace with your network credentials
 
-//const char* ssid     = "OnePlus2";
-//const char* password = "24681357";
+const char* ssid     = "OnePlus2";
+const char* password = "24681357";
 
-const char* ssid     = "Sde-Guest";
-const char* password = "";
+//const char* ssid     = "Sde-Guest";
+//const char* password = "";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -46,11 +75,43 @@ int pos1 = 0;
 int pos2 = 0;
 
 void setup() {
-  Serial.begin(115200);
+  //Serial.begin(115200);  
+    //REMEMBER TO COMMENT OUT BEFORE UPLOADING - FOR SOME REASON - WHAT THE FUCK
 
-  // Pin stuffs
-  pinMode(forwardPin, OUTPUT);
-  pinMode(backwardPin, OUTPUT);
+  // Pin stuffs -UPDATE TO DIRECTION
+  pinMode(Direction1Pin, OUTPUT);
+  pinMode(Direction2Pin, OUTPUT);
+  pinMode(Direction3Pin, OUTPUT);
+  pinMode(Direction4Pin, OUTPUT);
+
+  digitalWrite(Direction1Pin, LOW);
+  digitalWrite(Direction2Pin, LOW);
+  digitalWrite(Direction3Pin, LOW);
+  digitalWrite(Direction4Pin, LOW);
+
+  // MORE PWM STUFFS
+  // configure PWM functionalitites
+  ledcSetup(PWM1Channel, PWM1Freq, PWM1Resolution);
+  ledcSetup(PWM2Channel, PWM2Freq, PWM2Resolution);
+  ledcSetup(PWM3Channel, PWM3Freq, PWM3Resolution);
+  ledcSetup(PWM4Channel, PWM4Freq, PWM4Resolution);
+  
+  // attach the channel to the GPIO to be controlled
+  ledcAttachPin(PWM1Pin, PWM1Channel);
+  ledcAttachPin(PWM2Pin, PWM2Channel);
+  ledcAttachPin(PWM3Pin, PWM3Channel);
+  ledcAttachPin(PWM4Pin, PWM4Channel);
+
+  dutyCycle1 = 0; // 0%
+  dutyCycle2 = 0; // 0%
+  dutyCycle3 = 0; // 0%
+  dutyCycle4 = 0; // 0%
+
+  ledcWrite(PWM1Channel, dutyCycle1);
+  ledcWrite(PWM2Channel, dutyCycle2);
+  ledcWrite(PWM3Channel, dutyCycle3);
+  ledcWrite(PWM4Channel, dutyCycle4);
+
 
   // Connect to Wi-Fi network with SSID and password
   Serial.print("Connecting to ");
@@ -101,31 +162,48 @@ void loop(){
               Serial.println("Forward");
               bForward = true;
               bBackward = false;
+              bRotateCCW = false;
+              bRotateCW = false;
 
             }else if (header.indexOf("GET /left") >= 0) {
               Serial.println("Left");
               bLeft = true;
               bRight = false;
+              bRotateCCW = false;
+              bRotateCW = false;
                   
             }else if (header.indexOf("GET /right") >= 0) {
               Serial.println("Right");
               bRight = true;
               bLeft = false;
+              bRotateCCW = false;
+              bRotateCW = false;
                  
             }else if (header.indexOf("GET /backward") >= 0) {
               Serial.println("Backward");
               bBackward = true;
               bForward = false;
+              bRotateCCW = false;
+              bRotateCW = false;
 
             }else if (header.indexOf("GET /rotateccw") >= 0) {
               Serial.println("Rotate CCW");
               bRotateCCW = true;
-              
+              bBackward = false;
+              bForward = false;
+              bLeft = false;
+              bRight = false;
+              bRotateCW = false;
 
             }else if (header.indexOf("GET /rotatecw") >= 0) {
               Serial.println("Rotate CW");
               bRotateCW = true;
-                       
+              bBackward = false;
+              bForward = false;
+              bLeft = false;
+              bRight = false;
+              bRotateCCW = false;
+              
             }else if (header.indexOf("GET /stopforward") >= 0) {
               Serial.println("stopForward");
               bForward = false;
@@ -309,26 +387,62 @@ void loop(){
     movementChange = false;
 
     // Turn off pins
-    if (bForward == false){
-      Serial.println("Pin 19 LOW");
-      digitalWrite(forwardPin, LOW);
-    }
-    if (bBackward == false){
-      Serial.println("Pin 18 LOW");
-      digitalWrite(backwardPin, LOW);
-    }
-
-    delay(400);
+    dutyCycle1 = 0;
+    dutyCycle2 = 0;
+    dutyCycle3 = 0;
+    dutyCycle4 = 0;
   
     // Turn on pins
     if (bForward == true){
-      Serial.println("Pin 19 HIGH");
-      digitalWrite(forwardPin, HIGH);
+      digitalWrite(Direction1Pin, LOW);
+      dutyCycle1 = 224; // 87.5%
+      digitalWrite(Direction3Pin, HIGH);
+      dutyCycle3 = 224; // 87.5%
     }
     if (bBackward == true){
-      Serial.println("Pin 18 HIGH");
-      digitalWrite(backwardPin, HIGH);
+      digitalWrite(Direction1Pin, HIGH);
+      dutyCycle1 = 224; // 87.5%
+      digitalWrite(Direction3Pin, LOW);
+      dutyCycle3 = 224; // 87.5%
     }
+    if (bLeft == true){
+      digitalWrite(Direction2Pin, LOW);
+      dutyCycle2 = 224; // 87.5%
+      digitalWrite(Direction4Pin, HIGH);
+      dutyCycle4 = 224; // 87.5%
+    }
+    if (bRight == true){
+      digitalWrite(Direction2Pin, HIGH);
+      dutyCycle2 = 224; // 87.5%
+      digitalWrite(Direction4Pin, LOW);
+      dutyCycle4 = 224; // 87.5%
+    }
+    if (bRotateCCW == true){
+      digitalWrite(Direction1Pin, LOW);
+      dutyCycle1 = 160; // ?
+      digitalWrite(Direction2Pin, LOW);
+      dutyCycle2 = 160; // ?
+      digitalWrite(Direction3Pin, LOW);
+      dutyCycle3 = 160; // ?
+      digitalWrite(Direction4Pin, LOW);
+      dutyCycle4 = 160; // ?
+    }
+    if (bRotateCW == true){
+      digitalWrite(Direction1Pin, HIGH);
+      dutyCycle1 = 160; // ?
+      digitalWrite(Direction2Pin, HIGH);
+      dutyCycle2 = 160; // ?
+      digitalWrite(Direction3Pin, HIGH);
+      dutyCycle3 = 160; // ?
+      digitalWrite(Direction4Pin, HIGH);
+      dutyCycle4 = 160; // ?
+    }
+    
+    Serial.println(String(dutyCycle1)+" "+String(dutyCycle2)+" "+String(dutyCycle3)+" "+String(dutyCycle4));
+    ledcWrite(PWM1Channel, dutyCycle1);
+    ledcWrite(PWM2Channel, dutyCycle2);
+    ledcWrite(PWM3Channel, dutyCycle3);
+    ledcWrite(PWM4Channel, dutyCycle4);
   }
   
 }
