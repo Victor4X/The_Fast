@@ -4,15 +4,24 @@ Inspiration from:
   Rui Santos - https://github.com/RuiSantosdotme/ESP32-Course/blob/master/code/Project_Robot/Project_Robot.ino
   
 *********/
+
+
+
 // Set pin numbers
+
+//Light
+bool bLightMode = false;
+
+const int Light1Pin = 36;
+const int Light2Pin = 39;
 
   // Movement
 bool movementChange = false;
 
-const int Direction1Pin = 1;
-const int Direction2Pin = 3;
-const int Direction3Pin = 23;
-const int Direction4Pin = 22;
+const int Direction1Pin = 23;
+const int Direction2Pin = 22;
+const int Direction3Pin = 3;
+const int Direction4Pin = 1;
 
 // Movement variables
 bool bForward = false;
@@ -25,10 +34,10 @@ bool bRotateCW = false;
 
 // PWM STUFFS ARGH
 // the number of the output pin
-const int PWM1Pin = 5;  // Wheel 1 PWM
+const int PWM1Pin = 19;  // Wheel 1 PWM
 const int PWM2Pin = 17;  // Wheel 2 PWM
-const int PWM3Pin = 18;  // Wheel 3 PWM
-const int PWM4Pin = 19;  // Wheel 4 PWM
+const int PWM3Pin = 5;  // Wheel 3 PWM
+const int PWM4Pin = 18;  // Wheel 4 PWM
 
 // setting PWM properties
 const int PWM1Freq = 600; // VAR TIDLIGERE 5000
@@ -57,7 +66,7 @@ int dutyCycle4 = 0; // 0%
 
 // Replace with your network credentials
 
-const char* ssid     = "OnePlus2";
+const char* ssid     = "OnePlus2"; //IP: 192.168.43.63
 const char* password = "24681357";
 
 //const char* ssid     = "Sde-Guest";
@@ -78,7 +87,7 @@ void setup() {
   //Serial.begin(115200);  
     //REMEMBER TO COMMENT OUT BEFORE UPLOADING - FOR SOME REASON - WHAT THE FUCK
 
-  // Pin stuffs -UPDATE TO DIRECTION
+  // Pin stuffs
   pinMode(Direction1Pin, OUTPUT);
   pinMode(Direction2Pin, OUTPUT);
   pinMode(Direction3Pin, OUTPUT);
@@ -88,6 +97,12 @@ void setup() {
   digitalWrite(Direction2Pin, LOW);
   digitalWrite(Direction3Pin, LOW);
   digitalWrite(Direction4Pin, LOW);
+
+  // Light stuffs
+  pinMode(Light1Pin, INPUT);
+  pinMode(Light2Pin, INPUT);
+  pinMode(Light3Pin, INPUT);
+  pinMode(Light4Pin, INPUT);
 
   // MORE PWM STUFFS
   // configure PWM functionalitites
@@ -236,6 +251,18 @@ void loop(){
               bRight = false;
               bRotateCCW = false;
               bRotateCW = false;
+              bLightMode = false;
+                       
+            }else if (header.indexOf("GET /lightModeOn") >= 0) {
+              Serial.println("LIGHT MODE");
+              bBackward = false;
+              bForward = false;
+              bLeft = false;
+              bRight = false;
+              bRotateCCW = false;
+              bRotateCW = false;
+              
+              bLightMode = true;
                        
             }
 
@@ -251,6 +278,7 @@ void loop(){
             client.println("border: none; color: white; padding: 12px 28px; text-decoration: none; font-size: 26px; margin: 1px; cursor: pointer;}");
             client.println(".button2 {background-color: #555555;}");
             client.println(".button3 {background-color: #4162f4;}</style>");
+            client.println(".button3 {background-color: #ff9502;}</style>");
             client.println("</style>");
             client.println("</head>");
             
@@ -276,6 +304,8 @@ void loop(){
             client.println("<p><button class=\"button\" onclick=\"moveBackward()\">BACKWARD</button></p>");
             
             client.println("<p><button class=\"button button2\" onclick=\"stopAll()\">STOP</button></p>");
+
+            client.println("<p><button class=\"button button3\" onclick=\"lightModeOn()\">Light Mode</button></p>");
 
             client.println("</body>");
             
@@ -347,6 +377,8 @@ void loop(){
 
             client.println("function stopAll() { AjaxGET(\"/stopall\") };");
 
+            client.println("function lightModeOn() { AjaxGET(\"/lightModeOn\") };");
+
             //Ajax call (GET)
             client.println("function AjaxGET(target){");
             client.println("var opts = {");
@@ -381,8 +413,31 @@ void loop(){
     Serial.println("");
   }
 
-  // Movement stuffs
+  if (bLightMode = true){
+      bBackward = false;
+      bForward = false;
+      bLeft = false;
+      bRight = false;
+      bRotateCCW = false;
+      bRotateCW = false;
 
+      if (digitalRead(Light1Pin) == HIGH){
+        ;
+      }
+      else{
+        
+      }
+      if (digitalRead(Light2Pin) == HIGH){
+        stuff
+      }
+      else{
+        
+      }
+      
+      movementChange = true;
+    };
+
+  // Movement stuffs
   if (movementChange == true){
     movementChange = false;
 
@@ -397,45 +452,45 @@ void loop(){
       digitalWrite(Direction1Pin, LOW);
       dutyCycle1 = 224; // 87.5%
       digitalWrite(Direction3Pin, HIGH);
-      dutyCycle3 = 224; // 87.5%
+      dutyCycle3 = 243; // 95%
     }
     if (bBackward == true){
       digitalWrite(Direction1Pin, HIGH);
-      dutyCycle1 = 224; // 87.5%
+      dutyCycle1 = 243; // 95%
       digitalWrite(Direction3Pin, LOW);
       dutyCycle3 = 224; // 87.5%
     }
     if (bLeft == true){
       digitalWrite(Direction2Pin, LOW);
-      dutyCycle2 = 224; // 87.5%
+      dutyCycle2 = 214; // ??%
       digitalWrite(Direction4Pin, HIGH);
-      dutyCycle4 = 224; // 87.5%
+      dutyCycle4 = 256; // 100%
     }
     if (bRight == true){
       digitalWrite(Direction2Pin, HIGH);
-      dutyCycle2 = 224; // 87.5%
+      dutyCycle2 = 243; // 95%
       digitalWrite(Direction4Pin, LOW);
       dutyCycle4 = 224; // 87.5%
     }
     if (bRotateCCW == true){
       digitalWrite(Direction1Pin, LOW);
-      dutyCycle1 = 160; // ?
+      dutyCycle1 = 160; // ?%
       digitalWrite(Direction2Pin, LOW);
-      dutyCycle2 = 160; // ?
+      dutyCycle2 = 160; // 62.5%
       digitalWrite(Direction3Pin, LOW);
-      dutyCycle3 = 160; // ?
+      dutyCycle3 = 160; // 62.5%
       digitalWrite(Direction4Pin, LOW);
-      dutyCycle4 = 160; // ?
+      dutyCycle4 = 140; // 62.5%
     }
     if (bRotateCW == true){
       digitalWrite(Direction1Pin, HIGH);
-      dutyCycle1 = 160; // ?
+      dutyCycle1 = 160; // ?%
       digitalWrite(Direction2Pin, HIGH);
-      dutyCycle2 = 160; // ?
+      dutyCycle2 = 160; // 87.5%
       digitalWrite(Direction3Pin, HIGH);
-      dutyCycle3 = 160; // ?
+      dutyCycle3 = 160; // 87.5%
       digitalWrite(Direction4Pin, HIGH);
-      dutyCycle4 = 160; // ?
+      dutyCycle4 = 160; // 87.5%
     }
     
     Serial.println(String(dutyCycle1)+" "+String(dutyCycle2)+" "+String(dutyCycle3)+" "+String(dutyCycle4));
