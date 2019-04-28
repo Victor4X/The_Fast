@@ -66,11 +66,11 @@ int dutyCycle4 = 0; // 0%
 
 // Replace with your network credentials
 
-const char* ssid     = "OnePlus2"; //IP: 192.168.43.63
-const char* password = "24681357";
+//const char* ssid     = "OnePlus2"; //IP: 192.168.43.63
+//const char* password = "24681357";
 
-//const char* ssid     = "Sde-Guest";
-//const char* password = "";
+const char* ssid     = "Sde-Guest";
+const char* password = "";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -101,8 +101,6 @@ void setup() {
   // Light stuffs
   pinMode(Light1Pin, INPUT);
   pinMode(Light2Pin, INPUT);
-  pinMode(Light3Pin, INPUT);
-  pinMode(Light4Pin, INPUT);
 
   // MORE PWM STUFFS
   // configure PWM functionalitites
@@ -175,7 +173,7 @@ void loop(){
             
             if (header.indexOf("GET /forward") >= 0) {
               Serial.println("Forward");
-              bForward = true;
+              //bForward = true;
               bBackward = false;
               bRotateCCW = false;
               bRotateCW = false;
@@ -251,9 +249,9 @@ void loop(){
               bRight = false;
               bRotateCCW = false;
               bRotateCW = false;
-              bLightMode = false;
+              bLightMode = false;   
                        
-            }else if (header.indexOf("GET /lightModeOn") >= 0) {
+            }else if (header.indexOf("GET /lightmodeon") >= 0) {
               Serial.println("LIGHT MODE");
               bBackward = false;
               bForward = false;
@@ -277,12 +275,12 @@ void loop(){
             client.println(".button { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-color: #4CAF50;");
             client.println("border: none; color: white; padding: 12px 28px; text-decoration: none; font-size: 26px; margin: 1px; cursor: pointer;}");
             client.println(".button2 {background-color: #555555;}");
-            client.println(".button3 {background-color: #4162f4;}</style>");
-            client.println(".button3 {background-color: #ff9502;}</style>");
+            client.println(".button3 {background-color: #4162f4;}");
+            client.println(".button4 {background-color: #ff9502;}");
             client.println("</style>");
             client.println("</head>");
             
-            // Web Page        
+            // Web Page       
             client.println("<body bgcolor=\"#17181c\">");
               // Buttons
 
@@ -291,7 +289,7 @@ void loop(){
             // Turn left CCW
             client.println("<button class=\"button button3\" onclick=\"rotateCCW()\">TURN &#10226;</button>");
             // Move forwards
-            client.println("<button class=\"button\" onclick=\"moveForward()\">FORWARD</button>");
+            client.println("<button class=\"button button2\" onclick=\"moveForward()\">FORWARD</button>");
             // Turn right CW
             client.println("<button class=\"button button3\" onclick=\"rotateCW()\">TURN &#10227;</button>");
             client.println("</p> </div>");
@@ -305,7 +303,7 @@ void loop(){
             
             client.println("<p><button class=\"button button2\" onclick=\"stopAll()\">STOP</button></p>");
 
-            client.println("<p><button class=\"button button3\" onclick=\"lightModeOn()\">Light Mode</button></p>");
+            client.println("<p><button class=\"button button4\" onclick=\"lightModeOn()\">Light Mode</button></p>");
 
             client.println("</body>");
             
@@ -333,6 +331,9 @@ void loop(){
             client.println("    };");
             client.println("    if (evt.key == \"e\" && evt.repeat == false) {");
             client.println("  rotateCW()");
+            client.println("    };");
+            client.println("    if (evt.key == \" \" && evt.repeat == false) {");
+            client.println("  stopAll()");
             client.println("    };");
             client.println("};");
 
@@ -377,7 +378,7 @@ void loop(){
 
             client.println("function stopAll() { AjaxGET(\"/stopall\") };");
 
-            client.println("function lightModeOn() { AjaxGET(\"/lightModeOn\") };");
+            client.println("function lightModeOn() { AjaxGET(\"/lightmodeon\") };");
 
             //Ajax call (GET)
             client.println("function AjaxGET(target){");
@@ -413,29 +414,31 @@ void loop(){
     Serial.println("");
   }
 
-  if (bLightMode = true){
-      bBackward = false;
-      bForward = false;
-      bLeft = false;
-      bRight = false;
-      bRotateCCW = false;
-      bRotateCW = false;
+  if (bLightMode == true){
+    delay(100);
+    bBackward = false;
+    bForward = false;
+    bLeft = false;
+    bRight = false;
+    bRotateCCW = false;
+    bRotateCW = false;
 
-      if (digitalRead(Light1Pin) == HIGH){
-        ;
-      }
-      else{
-        
-      }
-      if (digitalRead(Light2Pin) == HIGH){
-        stuff
-      }
-      else{
-        
-      }
-      
-      movementChange = true;
-    };
+    if (digitalRead(Light1Pin) == LOW and digitalRead(Light2Pin) == HIGH){
+      //bForward = true;
+      bRotateCCW = true;
+    }
+    else if (digitalRead(Light1Pin) == HIGH and digitalRead(Light2Pin) == HIGH){
+      bLeft = true;
+    }
+    else if(digitalRead(Light1Pin) == HIGH and digitalRead(Light2Pin) == LOW){
+      bBackward = true;
+    }
+    else if(digitalRead(Light1Pin) == LOW and digitalRead(Light2Pin) == LOW){
+      bRight = true;
+    }
+    
+    movementChange = true;
+  };
 
   // Movement stuffs
   if (movementChange == true){
@@ -456,13 +459,13 @@ void loop(){
     }
     if (bBackward == true){
       digitalWrite(Direction1Pin, HIGH);
-      dutyCycle1 = 243; // 95%
+      dutyCycle1 = 256; // 95%
       digitalWrite(Direction3Pin, LOW);
-      dutyCycle3 = 224; // 87.5%
+      dutyCycle3 = 230; // 87.5%
     }
     if (bLeft == true){
       digitalWrite(Direction2Pin, LOW);
-      dutyCycle2 = 214; // ??%
+      dutyCycle2 = 224; // ??%
       digitalWrite(Direction4Pin, HIGH);
       dutyCycle4 = 256; // 100%
     }

@@ -7,8 +7,8 @@
 #include <WiFi.h>
 
 // Replace with your network credentials
-const char* ssid     = "OnePlus2";
-const char* password = "24681357";
+const char* ssid     = "Sde-Guest";
+const char* password = "";
 
 // Set web server port number to 80
 WiFiServer server(80);
