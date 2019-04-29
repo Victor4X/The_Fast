@@ -51,33 +51,9 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 5500 4300 50  0001 L CNN
 	1    5500 4300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x01_Male J30
-U 1 1 5CB310DE
-P 5650 3350
-F 0 "J30" H 5758 3531 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5758 3440 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5650 3350 50  0001 C CNN
-F 3 "~" H 5650 3350 50  0001 C CNN
-	1    5650 3350
-	1    0    0    -1  
-$EndComp
 Connection ~ 6000 3350
 Wire Wire Line
 	6000 3350 6000 3500
-$Comp
-L Connector:Conn_01x01_Male J28
-U 1 1 5CB310E6
-P 5500 3350
-F 0 "J28" H 5608 3531 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5608 3440 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5500 3350 50  0001 C CNN
-F 3 "~" H 5500 3350 50  0001 C CNN
-	1    5500 3350
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	5300 3350 5200 3350
 Connection ~ 5200 3350
 Wire Wire Line
 	5200 3350 5200 3500
@@ -109,7 +85,7 @@ $Comp
 L Device:R R11
 U 1 1 5CB31109
 P 5750 2350
-F 0 "R11" H 5820 2396 50  0000 L CNN
+F 0 "R11" V 5650 2300 50  0000 L CNN
 F 1 "R" H 5820 2305 50  0000 L CNN
 F 2 "footprints otg:R_vandret" V 5680 2350 50  0001 C CNN
 F 3 "~" H 5750 2350 50  0001 C CNN
@@ -147,30 +123,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 3700 4700 3600
 $Comp
-L Connector:Conn_01x01_Male J20
-U 1 1 5CB3112E
-P 4900 2750
-F 0 "J20" H 5008 2931 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5008 2840 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4900 2750 50  0001 C CNN
-F 3 "~" H 4900 2750 50  0001 C CNN
-	1    4900 2750
-	0    -1   1    0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J19
-U 1 1 5CB31134
-P 5000 2350
-F 0 "J19" H 5108 2531 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5108 2440 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5000 2350 50  0001 C CNN
-F 3 "~" H 5000 2350 50  0001 C CNN
-	1    5000 2350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5850 3350 6000 3350
-$Comp
 L Device:R R12
 U 1 1 5CB3113B
 P 5150 4300
@@ -195,8 +147,6 @@ $EndComp
 Wire Wire Line
 	5600 4600 5600 4550
 Wire Wire Line
-	5200 2650 5600 2650
-Wire Wire Line
 	6400 2950 6300 2950
 $Comp
 L Print-V2-rescue:TIP127-00-OTG-Transistor Q27
@@ -209,20 +159,6 @@ F 3 "http://www.fairchildsemi.com/ds/TI/TIP125.pdf" H 6100 2950 50  0001 L CNN
 	1    6100 2950
 	-1   0    0    1   
 $EndComp
-Connection ~ 5600 2650
-Wire Wire Line
-	5600 2650 6000 2650
-$Comp
-L Connector:Conn_01x01_Male J4
-U 1 1 5CAE1552
-P 5600 2850
-F 0 "J4" H 5708 3031 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5708 2940 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5600 2850 50  0001 C CNN
-F 3 "~" H 5600 2850 50  0001 C CNN
-	1    5600 2850
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	4700 2550 6400 2550
 Wire Wire Line
@@ -233,50 +169,6 @@ Wire Wire Line
 	6300 3700 6500 3700
 Wire Wire Line
 	5600 4100 5600 4000
-$Comp
-L Connector:Conn_01x01_Male J1
-U 1 1 5CAEBDCC
-P 4200 3100
-F 0 "J1" H 4308 3281 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 4308 3190 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4200 3100 50  0001 C CNN
-F 3 "~" H 4200 3100 50  0001 C CNN
-	1    4200 3100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J3
-U 1 1 5CAEC4E3
-P 5200 2050
-F 0 "J3" H 5308 2231 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5308 2140 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5200 2050 50  0001 C CNN
-F 3 "~" H 5200 2050 50  0001 C CNN
-	1    5200 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J2
-U 1 1 5CAECC3B
-P 4800 4300
-F 0 "J2" H 4908 4481 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 4908 4390 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4800 4300 50  0001 C CNN
-F 3 "~" H 4800 4300 50  0001 C CNN
-	1    4800 4300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J5
-U 1 1 5CAED36D
-P 5600 4800
-F 0 "J5" H 5708 4981 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5708 4890 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5600 4800 50  0001 C CNN
-F 3 "~" H 5600 4800 50  0001 C CNN
-	1    5600 4800
-	0    -1   -1   0   
-$EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 5CB1B826
@@ -291,4 +183,101 @@ $EndComp
 Connection ~ 5600 4550
 Wire Wire Line
 	5600 4550 5600 4500
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 5CC72A14
+P 5650 3550
+F 0 "J8" V 5522 3630 50  0000 L CNN
+F 1 "Conn_01x02" V 5613 3630 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 5650 3550 50  0001 C CNN
+F 3 "~" H 5650 3550 50  0001 C CNN
+	1    5650 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 3350 6000 3350
+Wire Wire Line
+	5200 3350 5550 3350
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5CC7573F
+P 5400 1850
+F 0 "J5" V 5364 1762 50  0000 R CNN
+F 1 "Conn_01x01" V 5273 1762 50  0000 R CNN
+F 2 "Custom footprints:Pin_D0.7mm_L6.5mm_W" H 5400 1850 50  0001 C CNN
+F 3 "~" H 5400 1850 50  0001 C CNN
+	1    5400 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5CC7650F
+P 4200 3100
+F 0 "J1" H 4118 2875 50  0000 C CNN
+F 1 "Conn_01x01" H 4118 2966 50  0000 C CNN
+F 2 "Custom footprints:Pin_D0.7mm_L6.5mm_W" H 4200 3100 50  0001 C CNN
+F 3 "~" H 4200 3100 50  0001 C CNN
+	1    4200 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5CC784BA
+P 5600 2850
+F 0 "J6" H 5518 2625 50  0000 C CNN
+F 1 "Conn_01x01" H 5518 2716 50  0000 C CNN
+F 2 "Custom footprints:Pin_D0.7mm_L6.5mm_W" H 5600 2850 50  0001 C CNN
+F 3 "~" H 5600 2850 50  0001 C CNN
+	1    5600 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5CC789E3
+P 4800 4300
+F 0 "J2" H 4718 4075 50  0000 C CNN
+F 1 "Conn_01x01" H 4718 4166 50  0000 C CNN
+F 2 "Custom footprints:Pin_D0.7mm_L6.5mm_W" H 4800 4300 50  0001 C CNN
+F 3 "~" H 4800 4300 50  0001 C CNN
+	1    4800 4300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 5CC78D4E
+P 5600 4800
+F 0 "J7" H 5518 4575 50  0000 C CNN
+F 1 "Conn_01x01" H 5518 4666 50  0000 C CNN
+F 2 "Custom footprints:Pin_D0.7mm_L6.5mm_W" H 5600 4800 50  0001 C CNN
+F 3 "~" H 5600 4800 50  0001 C CNN
+	1    5600 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 2650 5600 2650
+Connection ~ 5600 2650
+Wire Wire Line
+	5600 2650 6000 2650
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 5CC7CE50
+P 5000 2350
+F 0 "J4" V 4964 2262 50  0000 R CNN
+F 1 "Conn_01x01" V 4873 2262 50  0000 R CNN
+F 2 "Custom footprints:Pin_D0.7mm_L6.5mm_W" H 5000 2350 50  0001 C CNN
+F 3 "~" H 5000 2350 50  0001 C CNN
+	1    5000 2350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5CC7DC02
+P 4900 2750
+F 0 "J3" V 4864 2662 50  0000 R CNN
+F 1 "Conn_01x01" V 4773 2662 50  0000 R CNN
+F 2 "Custom footprints:Pin_D0.7mm_L6.5mm_W" H 4900 2750 50  0001 C CNN
+F 3 "~" H 4900 2750 50  0001 C CNN
+	1    4900 2750
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
