@@ -3,7 +3,7 @@ const int Light1Pin = 36;
 const int Light2Pin = 39;
 
 void setup() {
-  // put your setup code here, to run once:
+  // Start serial-monitor
   Serial.begin(115200);
   // Light stuffs
   
@@ -13,7 +13,8 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+
+  //Printer alle input-værdier hvert sekund
 
   Serial.print("Pin 1: ");
   Serial.print(digitalRead(Light1Pin));
